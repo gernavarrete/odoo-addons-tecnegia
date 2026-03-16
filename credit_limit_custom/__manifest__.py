@@ -1,6 +1,6 @@
 {
     "name": "Advanced Credit Limit Management | Cuenta Corriente",
-    "version": "19.0.1.2.0",
+    "version": "19.0.1.3.0",
     "author": "Tecnegia",
     "summary": "Gestión avanzada de Límite de Crédito, Cuentas Corrientes y Riesgo Crediticio",
     "description": "Control preventivo de deuda, límites de crédito, seguimiento de pagos y gestión de riesgo crediticio para clientes. Palabras clave: Cuenta Corriente, Límite de Crédito, Riesgo, Cobranzas, Mora, Credit Limit.",
