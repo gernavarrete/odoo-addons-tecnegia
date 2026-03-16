@@ -3,125 +3,197 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- Odoo already loads Bootstrap, but defining standard modern font for the preview if needed -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+        :root {
+            --primary-dark: #002147;
+            --accent-blue: #3a86ff;
+            --soft-gray: #f8f9fa;
+            --text-main: #333333;
+            --text-light: #666666;
+            --card-radius: 20px;
+        }
+
         .oe_container_custom {
             font-family: 'Inter', sans-serif;
-            background-color: #fcfcfc;
-            color: #333;
+            background-color: #ffffff;
+            color: var(--text-main);
+            padding: 0;
+            margin: 0;
         }
 
         .hero-section {
-            background: linear-gradient(135deg, #0A2540 0%, #173b64 100%);
+            background-color: var(--primary-dark);
             color: white;
-            padding: 60px 20px;
+            padding: 80px 20px;
             text-align: center;
-            border-radius: 10px;
-            margin-bottom: 40px;
+            border-radius: 0 0 var(--card-radius) var(--card-radius);
+            margin-bottom: 60px;
+        }
+
+        .hero-title-box {
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            padding: 20px 40px;
+            border-radius: var(--card-radius);
+            margin-bottom: 20px;
         }
 
         .hero-section h1 {
             font-weight: 700;
-            font-size: 3rem;
-            margin-bottom: 10px;
+            font-size: 3.5rem;
+            margin: 0;
             color: #fff;
+            letter-spacing: -1px;
         }
 
         .hero-section p {
-            font-size: 1.2rem;
+            font-size: 1.4rem;
             font-weight: 300;
             color: #bcccda;
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+
+        .section-header {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-header h2 {
+            font-weight: 700;
+            color: var(--primary-dark);
+            font-size: 2.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
+
+        .feature-grid {
+            margin-bottom: 80px;
         }
 
         .feature-card {
             background: white;
-            border: 1px solid #eaeaea;
-            border-radius: 8px;
-            padding: 30px;
+            border: 1px solid #eee;
+            border-radius: var(--card-radius);
+            padding: 40px;
             text-align: center;
             height: 100%;
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            margin-bottom: 30px;
         }
 
         .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+            border-color: var(--accent-blue);
         }
 
         .feature-card i {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #00d084;
+            font-size: 3rem;
+            margin-bottom: 25px;
+            color: var(--accent-blue);
         }
 
         .feature-card h4 {
-            font-weight: 600;
+            font-weight: 700;
+            color: var(--primary-dark);
             margin-bottom: 15px;
+            font-size: 1.5rem;
         }
 
-        .step-container {
-            display: flex;
-            align-items: flex-start;
+        .step-card {
+            background: var(--soft-gray);
+            padding: 60px 40px;
+            border-radius: var(--card-radius);
             margin-bottom: 40px;
-            background: white;
-            padding: 30px;
-            border-radius: 8px;
-            border-left: 4px solid #00d084;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+            border: 1px solid #eee;
         }
 
         .step-number {
-            font-size: 2rem;
+            display: inline-block;
+            background: var(--primary-dark);
+            color: white;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            border-radius: 50%;
             font-weight: 700;
-            color: #00d084;
-            margin-right: 30px;
-            line-height: 1;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
         }
 
         .step-content h3 {
-            font-weight: 600;
-            margin-top: 0;
-            color: #0A2540;
-        }
-
-        .step-content p {
-            font-size: 1.1rem;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        .screenshot-placeholder {
-            background: #f0f3f6;
-            border: 2px dashed #cfd8e3;
-            border-radius: 8px;
-            height: 300px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8898aa;
-            font-weight: 500;
-            font-size: 1.2rem;
-            margin-top: 20px;
-        }
-
-        .cta-section {
-            text-align: center;
-            padding: 50px 20px;
-            background: #f4f7f6;
-            border-radius: 10px;
-            margin-top: 50px;
-        }
-
-        .cta-section h2 {
             font-weight: 700;
-            color: #0A2540;
+            color: var(--primary-dark);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
         }
 
-        .cta-section a {
-            color: #00d084;
+        .screenshot-frame {
+            background: white;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #ddd;
+            margin-top: 30px;
+        }
+
+        .screenshot-frame img {
+            border-radius: 8px;
+            width: 100%;
+        }
+
+        .cta-box {
+            background: var(--primary-dark);
+            color: white;
+            border-radius: var(--card-radius);
+            padding: 60px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .cta-box h2 {
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        .cta-box a {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 30px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-top: 30px;
+            transition: opacity 0.2s;
+        }
+
+        .cta-box a:hover {
+            opacity: 0.9;
+        }
+
+        .badge-list {
+            margin-bottom: 30px;
+        }
+
+        .badge-item {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
     </style>
 </head>
@@ -130,208 +202,119 @@
 
     <section class="oe_container oe_container_custom">
         <!-- Hero Section -->
-        <div class="row">
-            <div class="col-md-12">
-                <div class="hero-section shadow-sm">
-                    <h1>Gesti&oacute;n de Cuenta Corriente y L&iacute;mite de Cr&eacute;dito</h1>
-                    <p>Automatiza tus controles financieros, protege tus ingresos y da seguimiento eficiente a las
-                        cuentas corrientes y cheques.
-                    </p>
-                </div>
+        <div class="hero-section">
+            <div class="hero-title-box">
+                <h1>Gesti&oacute;n de Cuenta Corriente y L&iacute;mite de Cr&eacute;dito</h1>
+            </div>
+            <p>Automatiza tus controles financieros y protege tus ingresos con un motor de riesgo avanzado para Odoo.</p>
+            <div class="badge-list mt-4">
+                <span class="badge-item">Community</span>
+                <span class="badge-item">Enterprise</span>
+                <span class="badge-item">Odoo.sh</span>
             </div>
         </div>
 
-        <!-- Core Features -->
-        <div class="row mt-4 mb-5">
-            <div class="col-md-12 text-center mb-4">
-                <h2 style="font-weight: 700; color: #0A2540;">&iquest;Por qu&eacute; elegir este m&oacute;dulo?</h2>
-                <p class="text-muted" style="font-size: 1.1rem;">Un motor de control minimalista pero extremadamente
-                    potente para prevenir deudas incobrables.</p>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-card">
-                    <i class="fa fa-shield"></i>
-                    <h4>Validaci&oacute;n Estricta</h4>
-                    <p class="text-muted">Bloquea autom&aacute;ticamente las &Oacute;rdenes de Venta si un cliente
-                        excede el cr&eacute;dito
-                        establecido o tiene la cuenta suspendida.</p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-card">
-                    <i class="fa fa-exchange"></i>
-                    <h4>Delegaci&oacute;n Configurable</h4>
-                    <p class="text-muted">El Aprobador puede habilitar desde Contabilidad > Ajustes que el Analista de
-                        Riesgo apruebe o rechace solicitudes en su nombre. Activable y revocable en cualquier
-                        momento.</p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-card">
-                    <i class="fa fa-percent"></i>
-                    <h4>Reglas de Descuento</h4>
-                    <p class="text-muted">Implementa restricciones en los descuentos m&aacute;ximos permitidos,
-                        requiriendo
-                        autorizaci&oacute;n para omitirlos.
-                    </p>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="feature-card">
-                    <i class="fa fa-money"></i>
-                    <h4>Integración con Cheques</h4>
-                    <p class="text-muted">Integraci&oacute;n nativa con <code>l10n_latam_check</code> para incorporar
-                        los
-                        montos de cheques pendientes al saldo deudor de forma autom&aacute;tica.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- How it Works (Step by Step) -->
-        <div class="row" style="margin-top: 60px;">
-            <div class="col-md-12 text-center mb-5">
-                <h2 style="font-weight: 700; color: #0A2540;">Gu&iacute;a Pr&aacute;ctica: &iquest;C&oacute;mo Funciona?
-                </h2>
-                <p class="text-muted" style="font-size: 1.1rem;">Un flujo de trabajo seguro, estructurado por roles y
-                    construido directamente dentro de Odoo.</p>
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header">
+                <h2>&iquest;Por qu&eacute; elegir este m&oacute;dulo?</h2>
+                <p>Una herramienta indispensable para prevenir deudas incobrables y optimizar la cobranza.</p>
             </div>
 
-            <div class="col-md-10 offset-md-1">
+            <!-- Features Grid -->
+            <div class="row feature-grid">
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="fa fa-shield"></i>
+                        <h4>Validaci&oacute;n Estricta</h4>
+                        <p class="text-muted">Bloquea autom&aacute;ticamente las &Oacute;rdenes de Venta si el cliente excede su cr&eacute;dito o est&aacute; suspendido.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="fa fa-users"></i>
+                        <h4>Delegaci&oacute;n de Riesgo</h4>
+                        <p class="text-muted">Configura din&aacute;micamente si los Analistas de Riesgo pueden aprobar excepciones en nombre del Auditor.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="fa fa-percent"></i>
+                        <h4>Control de Descuentos</h4>
+                        <p class="text-muted">Evita p&eacute;rdidas de margen restringiendo descuentos m&aacute;ximos sin autorizaci&oacute;n previa.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="feature-card">
+                        <i class="fa fa-money"></i>
+                        <h4>Trazabilidad de Cheques</h4>
+                        <p class="text-muted">Integraci&oacute;n nativa con <code>l10n_latam_check</code> para incluir cheques pendientes en el saldo real.</p>
+                    </div>
+                </div>
+            </div>
 
-                <!-- Step 1 -->
-                <div class="step-container">
+            <!-- Detailed Workflow -->
+            <div class="section-header">
+                <h2>Gu&iacute;a Visual del Flujo de Trabajo</h2>
+                <p>Descubre c&oacute;mo operan los distintos roles dentro del sistema.</p>
+            </div>
+
+            <!-- Step 1 -->
+            <div class="step-card">
+                <div class="text-center">
                     <div class="step-number">01</div>
-                    <div class="step-content" style="width: 100%;">
-                        <h3>Solicitud y Análisis de Crédito</h3>
-                        <p><strong>Rol: Ventas / Analista de Riesgo</strong><br>
-                            Todo comienza en el perfil del cliente. El equipo de ventas solicita abrir una Cuenta
-                            Corriente indicando el l&iacute;mite deseado. Luego, el <strong>Analista de Riesgo</strong>
-                            eval&uacute;a
-                            la solicitud, adjunta la documentaci&oacute;n financiera necesaria en Odoo y marca la cuenta
-                            como
-                            "Analizada".
-                        </p>
-                        <div class="mt-4">
-                            <h5 class="text-muted"><i class="fa fa-user mr-2"></i>Vista del Solicitante (Ventas)</h5>
-                            <img src="images/Solicitud_de_Apertura.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100" alt="Solicitud de Apertura" />
-                            <img src="images/Monto_y_motivo_de_Solicitud.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100" alt="Monto de la Solicitud" />
-                            <img src="images/Solicitud_Enviada.png"
-                                class="img-fluid rounded border shadow-sm mb-5 w-100" alt="Estado Solicitado" />
-
-                            <h5 class="text-muted"><i class="fa fa-search mr-2"></i>Vista del Analista de Riesgo</h5>
-                            <img src="images/Notificacion_de_Solicitud.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Notificaci&oacute;n del Analista" />
-                            <img src="images/Listado_de_Solicitudes_pendientes.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Filtro de Solicitudes pendientes" />
-                            <img src="images/Pesta&ntilde;a_de_Limite_de_Credito.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Resumen de Cr&eacute;dito en Contacto" />
+                    <div class="step-content">
+                        <h3>An&aacute;lisis y Documentaci&oacute;n</h3>
+                        <p>Los equipos de ventas solicitan, y el Analista de Riesgo eval&uacute;a y adjunta documentos clave directamente en el contacto.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="screenshot-frame">
+                            <img src="images/Solicitud_de_Apertura.png" alt="Solicitud">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="screenshot-frame">
+                            <img src="images/Chatter_con_Documentacion_para_Revision.png" alt="Documentacion">
                         </div>
                     </div>
                 </div>
-
-                <!-- Step 2 -->
-                <div class="step-container">
-                    <div class="step-number">02</div>
-                    <div class="step-content" style="width: 100%;">
-                        <h3>Aprobaci&oacute;n Financiera Oficial</h3>
-                        <p><strong>Rol: Gerencia / Aprobador</strong><br>
-                            Para mantener la separaci&oacute;n de responsabilidades, s&oacute;lo los usuarios con
-                            permisos de
-                            Aprobador pueden establecer y confirmar el l&iacute;mite definitivo. Una vez validado, la
-                            cuenta
-                            corriente queda autorizada para operar y el l&iacute;mite de cr&eacute;dito es oficial.</p>
-                        <div class="alert alert-info mt-3" role="alert">
-                            <i class="fa fa-cog mr-2"></i><strong>Delegaci&oacute;n din&aacute;mica:</strong> El
-                            Aprobador puede
-                            habilitar desde <em>Contabilidad > Ajustes > Credit Workflow</em> que el Analista de
-                            Riesgo tambi&eacute;n apruebe o rechace solicitudes. Este permiso se puede activar o revocar
-                            en cualquier momento.
-                        </div>
-                        <div class="mt-4">
-                            <h5 class="text-muted"><i class="fa fa-check-square-o mr-2"></i>Vista del Aprobador
-                                (Finanzas)</h5>
-                            <img src="images/Chatter_con_Documentacion_para_Revision.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Documentaci&oacute;n adjunta" />
-                            <img src="images/Botones_de_Aprobacion_o_Rechazo_de_Lider_de_Administracion.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Aprobaci&oacute;n del L&iacute;mite" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="step-container">
-                    <div class="step-number">03</div>
-                    <div class="step-content" style="width: 100%;">
-                        <h3>Ventas &Aacute;giles e Informadas</h3>
-                        <p><strong>Rol: Ventas</strong><br>
-                            Al crear una nueva Orden de Venta, la interfaz mostrar&aacute; instant&aacute;neamente un
-                            panel con el
-                            <strong>L&iacute;mite Aprobado, Cr&eacute;dito Utilizado y Cr&eacute;dito
-                                Disponible</strong> del cliente. El
-                            equipo comercial siempre sabe d&oacute;nde est&aacute; parado antes de enviar la
-                            cotizaci&oacute;n.
-                        </p>
-                        <div class="mt-4">
-                            <h5 class="text-muted"><i class="fa fa-user mr-2"></i>Permisos del Vendedor</h5>
-                            <img src="images/Vendedor_1.png" class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Permisos del Vendedor" />
-                            <h5 class="text-muted"><i class="fa fa-users mr-2"></i>Permisos del L&iacute;der de Ventas
-                            </h5>
-                            <img src="images/Lider_de_Ventas.png" class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Permisos del L&iacute;der de Ventas" />
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4 -->
-                <div class="step-container">
-                    <div class="step-number">04</div>
-                    <div class="step-content" style="width: 100%;">
-                        <h3>Validaci&oacute;n y Bloqueo Autom&aacute;tico</h3>
-                        <p><strong>Rol: Sistema Autom&aacute;tico</strong><br>
-                            Si el comercial intenta "Confirmar" una orden cuyo monto supera el saldo disponible
-                            (incluyendo la suma de facturas impagas y cheques de terceros sin cobrar), el sistema
-                            <strong>bloquear&aacute; de forma estricta</strong> la confirmaci&oacute;n. Adicionalmente,
-                            los
-                            Analistas
-                            pueden suspender manualmente las cuentas morosas con el bot&oacute;n "Bloquear Cuenta".
-                        </p>
-                        <div class="mt-4">
-                            <h5 class="text-muted"><i class="fa fa-lock mr-2"></i>Permisos del Responsable de Cobranzas
-                            </h5>
-                            <img src="images/Responsable_de_Cobranzas.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Permisos del Responsable de Cobranzas" />
-                            <h5 class="text-muted"><i class="fa fa-briefcase mr-2"></i>Permisos del L&iacute;der de
-                                Administraci&oacute;n</h5>
-                            <img src="images/Lider_de_Administracion.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Permisos del L&iacute;der de Administraci&oacute;n" />
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
 
-        <!-- CTA Support -->
-        <div class="row cta-section">
-            <div class="col-md-12">
-                <h2>&iquest;Listo para asegurar tus procesos de venta?</h2>
-                <p class="lead mt-3 mb-4">Gana tranquilidad operativa sabiendo que tu equipo comercial sigue
-                    estrictos
-                    lineamientos financieros.</p>
-                <p style="font-size: 1.1rem; color: #666;">&iquest;Necesitas soporte t&eacute;cnico o una
-                    implementaci&oacute;n a
-                    medida?<br>
-                    Cont&aacute;ctanos en <a href="mailto:tecnegia@gmail.com">tecnegia@gmail.com</a></p>
+            <!-- Step 2 -->
+            <div class="step-card" style="background-color: #fff;">
+                <div class="text-center">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Aprobaci&oacute;n Oficial</h3>
+                        <p>El Aprobador valida el l&iacute;mite final, activando la cuenta corriente para operaciones de venta seguras.</p>
+                    </div>
+                </div>
+                <div class="screenshot-frame" style="max-width: 800px; margin: 30px auto;">
+                    <img src="images/Botones_de_Aprobacion_o_Rechazo_de_Lider_de_Administracion.png" alt="Aprobacion">
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                <div class="text-center">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Ventas con Control en Tiempo Real</h3>
+                        <p>El vendedor tiene visibilidad total del cr&eacute;dito disponible mientras confecciona el presupuesto.</p>
+                    </div>
+                </div>
+                <div class="screenshot-frame">
+                    <img src="images/Pesta&ntilde;a_de_Limite_de_Credito.png" alt="Panel Ventas">
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-box">
+                <h2>&iquest;Necesitas una implementaci&oacute;n a medida?</h2>
+                <p>Optimiza tu gesti&oacute;n financiera con el respaldo t&eacute;cnico de Tecnegia.</p>
+                <a href="mailto:tecnegia@gmail.com">Contactar con Soporte</a>
             </div>
         </div>
     </section>
@@ -339,3 +322,4 @@
 </body>
 
 </html>
+ml>
