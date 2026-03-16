@@ -152,7 +152,8 @@
                 <div class="feature-card">
                     <i class="fa fa-shield"></i>
                     <h4>Validaci&oacute;n Estricta</h4>
-                    <p class="text-muted">Bloquea autom&aacute;ticamente las &Oacute;rdenes de Venta si un cliente excede el cr&eacute;dito
+                    <p class="text-muted">Bloquea autom&aacute;ticamente las &Oacute;rdenes de Venta si un cliente
+                        excede el cr&eacute;dito
                         establecido o tiene la cuenta suspendida.</p>
                 </div>
             </div>
@@ -169,7 +170,8 @@
                 <div class="feature-card">
                     <i class="fa fa-percent"></i>
                     <h4>Reglas de Descuento</h4>
-                    <p class="text-muted">Implementa restricciones en los descuentos m&aacute;ximos permitidos, requiriendo
+                    <p class="text-muted">Implementa restricciones en los descuentos m&aacute;ximos permitidos,
+                        requiriendo
                         autorizaci&oacute;n para omitirlos.
                     </p>
                 </div>
@@ -178,7 +180,8 @@
                 <div class="feature-card">
                     <i class="fa fa-money"></i>
                     <h4>Integración con Cheques</h4>
-                    <p class="text-muted">Integraci&oacute;n nativa con <code>l10n_latam_check</code> para incorporar los
+                    <p class="text-muted">Integraci&oacute;n nativa con <code>l10n_latam_check</code> para incorporar
+                        los
                         montos de cheques pendientes al saldo deudor de forma autom&aacute;tica.</p>
                 </div>
             </div>
@@ -187,7 +190,8 @@
         <!-- How it Works (Step by Step) -->
         <div class="row" style="margin-top: 60px;">
             <div class="col-md-12 text-center mb-5">
-                <h2 style="font-weight: 700; color: #0A2540;">Gu&iacute;a Pr&aacute;ctica: &iquest;C&oacute;mo Funciona?</h2>
+                <h2 style="font-weight: 700; color: #0A2540;">Gu&iacute;a Pr&aacute;ctica: &iquest;C&oacute;mo Funciona?
+                </h2>
                 <p class="text-muted" style="font-size: 1.1rem;">Un flujo de trabajo seguro, estructurado por roles y
                     construido directamente dentro de Odoo.</p>
             </div>
@@ -201,8 +205,10 @@
                         <h3>Solicitud y Análisis de Crédito</h3>
                         <p><strong>Rol: Ventas / Analista de Riesgo</strong><br>
                             Todo comienza en el perfil del cliente. El equipo de ventas solicita abrir una Cuenta
-                            Corriente indicando el l&iacute;mite deseado. Luego, el <strong>Analista de Riesgo</strong> eval&uacute;a
-                            la solicitud, adjunta la documentaci&oacute;n financiera necesaria en Odoo y marca la cuenta como
+                            Corriente indicando el l&iacute;mite deseado. Luego, el <strong>Analista de Riesgo</strong>
+                            eval&uacute;a
+                            la solicitud, adjunta la documentaci&oacute;n financiera necesaria en Odoo y marca la cuenta
+                            como
                             "Analizada".
                         </p>
                         <div class="mt-4">
@@ -213,13 +219,17 @@
                                 class="img-fluid rounded border shadow-sm mb-3 w-100" alt="Monto de la Solicitud" />
                             <img src="images/Solicitud_Enviada.png"
                                 class="img-fluid rounded border shadow-sm mb-5 w-100" alt="Estado Solicitado" />
- 
+
                             <h5 class="text-muted"><i class="fa fa-search mr-2"></i>Vista del Analista de Riesgo</h5>
                             <img src="images/Notificacion_de_Solicitud.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100" alt="Notificaci&oacute;n del Analista" />
+                                class="img-fluid rounded border shadow-sm mb-3 w-100"
+                                alt="Notificaci&oacute;n del Analista" />
                             <img src="images/Listado_de_Solicitudes_pendientes.png"
                                 class="img-fluid rounded border shadow-sm mb-3 w-100"
                                 alt="Filtro de Solicitudes pendientes" />
+                            <img src="images/Pesta&ntilde;a_de_Limite_de_Credito.png"
+                                class="img-fluid rounded border shadow-sm mb-3 w-100"
+                                alt="Resumen de Cr&eacute;dito en Contacto" />
                         </div>
                     </div>
                 </div>
@@ -230,12 +240,14 @@
                     <div class="step-content" style="width: 100%;">
                         <h3>Aprobaci&oacute;n Financiera Oficial</h3>
                         <p><strong>Rol: Gerencia / Aprobador</strong><br>
-                            Para mantener la separaci&oacute;n de responsabilidades, s&oacute;lo los usuarios con permisos de
+                            Para mantener la separaci&oacute;n de responsabilidades, s&oacute;lo los usuarios con
+                            permisos de
                             Aprobador pueden establecer y confirmar el l&iacute;mite definitivo. Una vez validado, la
                             cuenta
                             corriente queda autorizada para operar y el l&iacute;mite de cr&eacute;dito es oficial.</p>
                         <div class="alert alert-info mt-3" role="alert">
-                            <i class="fa fa-cog mr-2"></i><strong>Delegaci&oacute;n din&aacute;mica:</strong> El Aprobador puede
+                            <i class="fa fa-cog mr-2"></i><strong>Delegaci&oacute;n din&aacute;mica:</strong> El
+                            Aprobador puede
                             habilitar desde <em>Contabilidad > Ajustes > Credit Workflow</em> que el Analista de
                             Riesgo tambi&eacute;n apruebe o rechace solicitudes. Este permiso se puede activar o revocar
                             en cualquier momento.
@@ -244,12 +256,11 @@
                             <h5 class="text-muted"><i class="fa fa-check-square-o mr-2"></i>Vista del Aprobador
                                 (Finanzas)</h5>
                             <img src="images/Chatter_con_Documentacion_para_Revision.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100" alt="Documentaci&oacute;n adjunta" />
-                            <img src="images/Botones_de_Aprobacion_o_Rechazo_de_Lider_de_Administracion.png"
-                                class="img-fluid rounded border shadow-sm mb-3 w-100" alt="Aprobaci&oacute;n del L&iacute;mite" />
-                            <img src="images/Pesta&ntilde;a_de_Limite_de_Credito.png"
                                 class="img-fluid rounded border shadow-sm mb-3 w-100"
-                                alt="Resumen de Cr&eacute;dito en Contacto" />
+                                alt="Documentaci&oacute;n adjunta" />
+                            <img src="images/Botones_de_Aprobacion_o_Rechazo_de_Lider_de_Administracion.png"
+                                class="img-fluid rounded border shadow-sm mb-3 w-100"
+                                alt="Aprobaci&oacute;n del L&iacute;mite" />
                         </div>
                     </div>
                 </div>
@@ -260,15 +271,19 @@
                     <div class="step-content" style="width: 100%;">
                         <h3>Ventas &Aacute;giles e Informadas</h3>
                         <p><strong>Rol: Ventas</strong><br>
-                            Al crear una nueva Orden de Venta, la interfaz mostrar&aacute; instant&aacute;neamente un panel con el
-                            <strong>L&iacute;mite Aprobado, Cr&eacute;dito Utilizado y Cr&eacute;dito Disponible</strong> del cliente. El
-                            equipo comercial siempre sabe d&oacute;nde est&aacute; parado antes de enviar la cotizaci&oacute;n.
+                            Al crear una nueva Orden de Venta, la interfaz mostrar&aacute; instant&aacute;neamente un
+                            panel con el
+                            <strong>L&iacute;mite Aprobado, Cr&eacute;dito Utilizado y Cr&eacute;dito
+                                Disponible</strong> del cliente. El
+                            equipo comercial siempre sabe d&oacute;nde est&aacute; parado antes de enviar la
+                            cotizaci&oacute;n.
                         </p>
                         <div class="mt-4">
                             <h5 class="text-muted"><i class="fa fa-user mr-2"></i>Permisos del Vendedor</h5>
                             <img src="images/Vendedor_1.png" class="img-fluid rounded border shadow-sm mb-3 w-100"
                                 alt="Permisos del Vendedor" />
-                            <h5 class="text-muted"><i class="fa fa-users mr-2"></i>Permisos del L&iacute;der de Ventas</h5>
+                            <h5 class="text-muted"><i class="fa fa-users mr-2"></i>Permisos del L&iacute;der de Ventas
+                            </h5>
                             <img src="images/Lider_de_Ventas.png" class="img-fluid rounded border shadow-sm mb-3 w-100"
                                 alt="Permisos del L&iacute;der de Ventas" />
                         </div>
@@ -283,7 +298,8 @@
                         <p><strong>Rol: Sistema Autom&aacute;tico</strong><br>
                             Si el comercial intenta "Confirmar" una orden cuyo monto supera el saldo disponible
                             (incluyendo la suma de facturas impagas y cheques de terceros sin cobrar), el sistema
-                            <strong>bloquear&aacute; de forma estricta</strong> la confirmaci&oacute;n. Adicionalmente, los
+                            <strong>bloquear&aacute; de forma estricta</strong> la confirmaci&oacute;n. Adicionalmente,
+                            los
                             Analistas
                             pueden suspender manualmente las cuentas morosas con el bot&oacute;n "Bloquear Cuenta".
                         </p>
@@ -312,7 +328,8 @@
                 <p class="lead mt-3 mb-4">Gana tranquilidad operativa sabiendo que tu equipo comercial sigue
                     estrictos
                     lineamientos financieros.</p>
-                <p style="font-size: 1.1rem; color: #666;">&iquest;Necesitas soporte t&eacute;cnico o una implementaci&oacute;n a
+                <p style="font-size: 1.1rem; color: #666;">&iquest;Necesitas soporte t&eacute;cnico o una
+                    implementaci&oacute;n a
                     medida?<br>
                     Cont&aacute;ctanos en <a href="mailto:tecnegia@gmail.com">tecnegia@gmail.com</a></p>
             </div>
