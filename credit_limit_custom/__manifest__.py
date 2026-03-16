@@ -1,0 +1,33 @@
+{
+    "name": "Advanced Credit Limit Management",
+    "version": "19.0.1.0.0",
+    "author": "Tecnegia",
+    "summary": "Credit limits management with payment tracking",
+    "description": "Custom module for managing customer credit limits, sales discounts, and payment method tracking for checks.",
+    "category": "Contact",
+    "depends": [
+        "base",
+        "account",
+        "sale",
+        "sale_management",
+        "l10n_latam_check",
+    ],
+
+    "data": [
+        "security/security.xml",
+        "security/ir.model.access.csv",
+        "wizard/credit_account_change_view.xml",
+        "wizard/upload_credit_document_view.xml",
+        "views/credit_limit_fields.xml",
+        "views/res_config_settings_view.xml",
+        "views/account_move.xml",
+        "views/account_payment_term.xml",
+        "views/sale_order_view.xml",
+    ],
+    "installable": True,
+    "auto_install": False,
+    "license": "OPL-1",
+    "price": 149.00,
+    "currency": "EUR",
+    "images": ["static/description/banner.png"],
+}

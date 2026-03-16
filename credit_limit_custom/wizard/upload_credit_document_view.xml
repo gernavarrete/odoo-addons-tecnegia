@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_upload_credit_document_form" model="ir.ui.view">
+        <field name="name">upload.credit.document.form</field>
+        <field name="model">upload.credit.document</field>
+        <field name="arch" type="xml">
+            <form string="Upload Documentation">
+                <group>
+                    <field name="partner_id" invisible="1" />
+                    <field name="description" placeholder="Ex: Balance 2024, Informe Nosis, etc." />
+                    <field name="file_data" filename="file_name" />
+                    <field name="file_name" invisible="1" />
+                </group>
+                <footer>
+                    <button name="action_upload" string="Upload" type="object" class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_upload_credit_document" model="ir.actions.act_window">
+        <field name="name">Upload Documentation</field>
+        <field name="res_model">upload.credit.document</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+</odoo>
