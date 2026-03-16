@@ -3,322 +3,127 @@
 
 <head>
     <meta charset="UTF-8">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-        :root {
-            --primary-dark: #002147;
-            --accent-blue: #3a86ff;
-            --soft-gray: #f8f9fa;
-            --text-main: #333333;
-            --text-light: #666666;
-            --card-radius: 20px;
-        }
-
-        .oe_container_custom {
-            font-family: 'Inter', sans-serif;
-            background-color: #ffffff;
-            color: var(--text-main);
-            padding: 0;
-            margin: 0;
-        }
-
-        .hero-section {
-            background-color: var(--primary-dark);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-            border-radius: 0 0 var(--card-radius) var(--card-radius);
-            margin-bottom: 60px;
-        }
-
-        .hero-title-box {
-            display: inline-block;
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            padding: 20px 40px;
-            border-radius: var(--card-radius);
-            margin-bottom: 20px;
-        }
-
-        .hero-section h1 {
-            font-weight: 700;
-            font-size: 3.5rem;
-            margin: 0;
-            color: #fff;
-            letter-spacing: -1px;
-        }
-
-        .hero-section p {
-            font-size: 1.4rem;
-            font-weight: 300;
-            color: #bcccda;
-            max-width: 800px;
-            margin: 20px auto 0;
-        }
-
-        .section-header {
-            margin-bottom: 50px;
-            text-align: center;
-        }
-
-        .section-header h2 {
-            font-weight: 700;
-            color: var(--primary-dark);
-            font-size: 2.5rem;
-        }
-
-        .section-header p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-        }
-
-        .feature-grid {
-            margin-bottom: 80px;
-        }
-
-        .feature-card {
-            background: white;
-            border: 1px solid #eee;
-            border-radius: var(--card-radius);
-            padding: 40px;
-            text-align: center;
-            height: 100%;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-            margin-bottom: 30px;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
-            border-color: var(--accent-blue);
-        }
-
-        .feature-card i {
-            font-size: 3rem;
-            margin-bottom: 25px;
-            color: var(--accent-blue);
-        }
-
-        .feature-card h4 {
-            font-weight: 700;
-            color: var(--primary-dark);
-            margin-bottom: 15px;
-            font-size: 1.5rem;
-        }
-
-        .step-card {
-            background: var(--soft-gray);
-            padding: 60px 40px;
-            border-radius: var(--card-radius);
-            margin-bottom: 40px;
-            border: 1px solid #eee;
-        }
-
-        .step-number {
-            display: inline-block;
-            background: var(--primary-dark);
-            color: white;
-            width: 50px;
-            height: 50px;
-            line-height: 50px;
-            border-radius: 50%;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-
-        .step-content h3 {
-            font-weight: 700;
-            color: var(--primary-dark);
-            font-size: 2.2rem;
-            margin-bottom: 20px;
-        }
-
-        .screenshot-frame {
-            background: white;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #ddd;
-            margin-top: 30px;
-        }
-
-        .screenshot-frame img {
-            border-radius: 8px;
-            width: 100%;
-        }
-
-        .cta-box {
-            background: var(--primary-dark);
-            color: white;
-            border-radius: var(--card-radius);
-            padding: 60px;
-            text-align: center;
-            margin-top: 80px;
-        }
-
-        .cta-box h2 {
-            font-weight: 700;
-            margin-bottom: 20px;
-            font-size: 2.5rem;
-        }
-
-        .cta-box a {
-            display: inline-block;
-            background: var(--accent-blue);
-            color: white;
-            padding: 15px 40px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-top: 30px;
-            transition: opacity 0.2s;
-        }
-
-        .cta-box a:hover {
-            opacity: 0.9;
-        }
-
-        .badge-list {
-            margin-bottom: 30px;
-        }
-
-        .badge-item {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin: 5px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-    </style>
 </head>
 
 <body>
-
-    <section class="oe_container oe_container_custom">
+    <section class="oe_container" style="font-family: 'Inter', sans-serif; color: #333333; margin: 0; padding: 0;">
         <!-- Hero Section -->
-        <div class="hero-section">
-            <div class="hero-title-box">
-                <h1>Gesti&oacute;n de Cuenta Corriente y L&iacute;mite de Cr&eacute;dito</h1>
+        <div style="background-color: #002147; color: white; padding: 80px 20px; text-align: center; border-radius: 0 0 20px 20px; margin-bottom: 60px;">
+            <div style="display: inline-block; border: 2px solid rgba(255, 255, 255, 0.2); padding: 20px 40px; border-radius: 20px; margin-bottom: 20px;">
+                <h1 style="font-weight: 700; font-size: 3.2rem; margin: 0; color: #fff; letter-spacing: -1px;">Gesti&oacute;n de Cuenta Corriente y L&iacute;mite de Cr&eacute;dito</h1>
             </div>
-            <p>Automatiza tus controles financieros y protege tus ingresos con un motor de riesgo avanzado para Odoo.</p>
-            <div class="badge-list mt-4">
-                <span class="badge-item">Community</span>
-                <span class="badge-item">Enterprise</span>
-                <span class="badge-item">Odoo.sh</span>
+            <p style="font-size: 1.3rem; font-weight: 300; color: #bcccda; max-width: 800px; margin: 20px auto 0;">Automatiza tus controles financieros y protege tus ingresos con un motor de riesgo avanzado para Odoo.</p>
+            <div style="margin-top: 30px;">
+                <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin: 5px; border: 1px solid rgba(255, 255, 255, 0.2);">Community</span>
+                <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin: 5px; border: 1px solid rgba(255, 255, 255, 0.2);">Enterprise</span>
+                <span style="display: inline-block; background: rgba(255, 255, 255, 0.1); color: white; padding: 8px 15px; border-radius: 20px; font-size: 0.9rem; margin: 5px; border: 1px solid rgba(255, 255, 255, 0.2);">Odoo.sh</span>
             </div>
         </div>
 
         <div class="container">
             <!-- Section Header -->
-            <div class="section-header">
-                <h2>&iquest;Por qu&eacute; elegir este m&oacute;dulo?</h2>
-                <p>Una herramienta indispensable para prevenir deudas incobrables y optimizar la cobranza.</p>
+            <div style="margin-bottom: 50px; text-align: center;">
+                <h2 style="font-weight: 700; color: #002147; font-size: 2.5rem;">&iquest;Por qu&eacute; elegir este m&oacute;dulo?</h2>
+                <p style="font-size: 1.2rem; color: #666666;">Una herramienta indispensable para prevenir deudas incobrables y optimizar la cobranza.</p>
             </div>
 
             <!-- Features Grid -->
-            <div class="row feature-grid">
-                <div class="col-md-6 mb-4">
-                    <div class="feature-card">
-                        <i class="fa fa-shield"></i>
-                        <h4>Validaci&oacute;n Estricta</h4>
-                        <p class="text-muted">Bloquea autom&aacute;ticamente las &Oacute;rdenes de Venta si el cliente excede su cr&eacute;dito o est&aacute; suspendido.</p>
+            <div class="row">
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <div style="background: white; border: 1px solid #eee; border-radius: 20px; padding: 40px; text-align: center; height: 100%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);">
+                        <i class="fa fa-shield" style="font-size: 3rem; margin-bottom: 25px; color: #3a86ff;"></i>
+                        <h4 style="font-weight: 700; color: #002147; margin-bottom: 15px; font-size: 1.5rem;">Validaci&oacute;n Estricta</h4>
+                        <p style="color: #666666;">Bloquea autom&aacute;ticamente las &Oacute;rdenes de Venta si el cliente excede su cr&eacute;dito o est&aacute; suspendido.</p>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="feature-card">
-                        <i class="fa fa-users"></i>
-                        <h4>Delegaci&oacute;n de Riesgo</h4>
-                        <p class="text-muted">Configura din&aacute;micamente si los Analistas de Riesgo pueden aprobar excepciones en nombre del Auditor.</p>
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <div style="background: white; border: 1px solid #eee; border-radius: 20px; padding: 40px; text-align: center; height: 100%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);">
+                        <i class="fa fa-users" style="font-size: 3rem; margin-bottom: 25px; color: #3a86ff;"></i>
+                        <h4 style="font-weight: 700; color: #002147; margin-bottom: 15px; font-size: 1.5rem;">Delegaci&oacute;n de Riesgo</h4>
+                        <p style="color: #666666;">Configura din&aacute;micamente si los Analistas de Riesgo pueden aprobar excepciones en nombre del Auditor.</p>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="feature-card">
-                        <i class="fa fa-percent"></i>
-                        <h4>Control de Descuentos</h4>
-                        <p class="text-muted">Evita p&eacute;rdidas de margen restringiendo descuentos m&aacute;ximos sin autorizaci&oacute;n previa.</p>
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <div style="background: white; border: 1px solid #eee; border-radius: 20px; padding: 40px; text-align: center; height: 100%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);">
+                        <i class="fa fa-percent" style="font-size: 3rem; margin-bottom: 25px; color: #3a86ff;"></i>
+                        <h4 style="font-weight: 700; color: #002147; margin-bottom: 15px; font-size: 1.5rem;">Control de Descuentos</h4>
+                        <p style="color: #666666;">Evita p&eacute;rdidas de margen restringiendo descuentos m&aacute;ximos sin autorizaci&oacute;n previa.</p>
                     </div>
                 </div>
-                <div class="col-md-6 mb-4">
-                    <div class="feature-card">
-                        <i class="fa fa-money"></i>
-                        <h4>Trazabilidad de Cheques</h4>
-                        <p class="text-muted">Integraci&oacute;n nativa con <code>l10n_latam_check</code> para incluir cheques pendientes en el saldo real.</p>
+                <div class="col-md-6" style="margin-bottom: 30px;">
+                    <div style="background: white; border: 1px solid #eee; border-radius: 20px; padding: 40px; text-align: center; height: 100%; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);">
+                        <i class="fa fa-money" style="font-size: 3rem; margin-bottom: 25px; color: #3a86ff;"></i>
+                        <h4 style="font-weight: 700; color: #002147; margin-bottom: 15px; font-size: 1.5rem;">Trazabilidad de Cheques</h4>
+                        <p style="color: #666666;">Integraci&oacute;n nativa con <code>l10n_latam_check</code> para incluir cheques pendientes en el saldo real.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Detailed Workflow -->
-            <div class="section-header">
-                <h2>Gu&iacute;a Visual del Flujo de Trabajo</h2>
-                <p>Descubre c&oacute;mo operan los distintos roles dentro del sistema.</p>
+            <div style="margin: 60px 0 50px; text-align: center;">
+                <h2 style="font-weight: 700; color: #002147; font-size: 2.5rem;">Gu&iacute;a Visual del Flujo de Trabajo</h2>
+                <p style="font-size: 1.2rem; color: #666666;">Descubre c&oacute;mo operan los distintos roles dentro del sistema.</p>
             </div>
 
             <!-- Step 1 -->
-            <div class="step-card">
-                <div class="text-center">
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>An&aacute;lisis y Documentaci&oacute;n</h3>
-                        <p>Los equipos de ventas solicitan, y el Analista de Riesgo eval&uacute;a y adjunta documentos clave directamente en el contacto.</p>
+            <div style="background: #f8f9fa; padding: 60px 40px; border-radius: 20px; margin-bottom: 40px; border: 1px solid #eee;">
+                <div style="text-align: center;">
+                    <div style="display: inline-block; background: #002147; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; font-weight: 700; font-size: 1.2rem; margin-bottom: 20px;">01</div>
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="font-weight: 700; color: #002147; font-size: 2.2rem; margin-bottom: 15px;">An&aacute;lisis y Documentaci&oacute;n</h3>
+                        <p style="font-size: 1.1rem; color: #666666;">Los equipos de ventas solicitan, y el Analista de Riesgo eval&uacute;a y adjunta documentos clave directamente en el contacto.</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-6">
-                        <div class="screenshot-frame">
-                            <img src="images/Solicitud_de_Apertura.png" alt="Solicitud">
+                        <div style="background: white; padding: 10px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border: 1px solid #ddd; margin-top: 20px;">
+                            <img src="images/Solicitud_de_Apertura.png" style="width: 100%; border-radius: 8px;" alt="Solicitud">
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="screenshot-frame">
-                            <img src="images/Chatter_con_Documentacion_para_Revision.png" alt="Documentacion">
+                        <div style="background: white; padding: 10px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border: 1px solid #ddd; margin-top: 20px;">
+                            <img src="images/Chatter_con_Documentacion_para_Revision.png" style="width: 100%; border-radius: 8px;" alt="Documentacion">
                         </div>
                     </div>
                 </div>
             </div>
 
             <!-- Step 2 -->
-            <div class="step-card" style="background-color: #fff;">
-                <div class="text-center">
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Aprobaci&oacute;n Oficial</h3>
-                        <p>El Aprobador valida el l&iacute;mite final, activando la cuenta corriente para operaciones de venta seguras.</p>
+            <div style="background: white; padding: 60px 40px; border-radius: 20px; margin-bottom: 40px; border: 1px solid #eee;">
+                <div style="text-align: center;">
+                    <div style="display: inline-block; background: #002147; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; font-weight: 700; font-size: 1.2rem; margin-bottom: 20px;">02</div>
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="font-weight: 700; color: #002147; font-size: 2.2rem; margin-bottom: 15px;">Aprobaci&oacute;n Oficial</h3>
+                        <p style="font-size: 1.1rem; color: #666666;">El Aprobador valida el l&iacute;mite final, activando la cuenta corriente para operaciones de venta seguras.</p>
                     </div>
-                </div>
-                <div class="screenshot-frame" style="max-width: 800px; margin: 30px auto;">
-                    <img src="images/Botones_de_Aprobacion_o_Rechazo_de_Lider_de_Administracion.png" alt="Aprobacion">
+                    <div style="background: white; padding: 10px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border: 1px solid #ddd; max-width: 800px; margin: 30px auto;">
+                        <img src="images/Botones_de_Aprobacion_o_Rechazo_de_Lider_de_Administracion.png" style="width: 100%; border-radius: 8px;" alt="Aprobacion">
+                    </div>
                 </div>
             </div>
 
             <!-- Step 3 -->
-            <div class="step-card">
-                <div class="text-center">
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Ventas con Control en Tiempo Real</h3>
-                        <p>El vendedor tiene visibilidad total del cr&eacute;dito disponible mientras confecciona el presupuesto.</p>
+            <div style="background: #f8f9fa; padding: 60px 40px; border-radius: 20px; margin-bottom: 40px; border: 1px solid #eee;">
+                <div style="text-align: center;">
+                    <div style="display: inline-block; background: #002147; color: white; width: 50px; height: 50px; line-height: 50px; border-radius: 50%; font-weight: 700; font-size: 1.2rem; margin-bottom: 20px;">03</div>
+                    <div style="margin-bottom: 30px;">
+                        <h3 style="font-weight: 700; color: #002147; font-size: 2.2rem; margin-bottom: 15px;">Ventas con Control en Tiempo Real</h3>
+                        <p style="font-size: 1.1rem; color: #666666;">El vendedor tiene visibilidad total del cr&eacute;dito disponible mientras confecciona el presupuesto.</p>
                     </div>
-                </div>
-                <div class="screenshot-frame">
-                    <img src="images/Pesta&ntilde;a_de_Limite_de_Credito.png" alt="Panel Ventas">
+                    <div style="background: white; padding: 10px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); border: 1px solid #ddd; margin-top: 20px;">
+                        <img src="images/Pesta&ntilde;a_de_Limite_de_Credito.png" style="width: 100%; border-radius: 8px;" alt="Panel Ventas">
+                    </div>
                 </div>
             </div>
 
             <!-- CTA Section -->
-            <div class="cta-box">
-                <h2>&iquest;Necesitas una implementaci&oacute;n a medida?</h2>
-                <p>Optimiza tu gesti&oacute;n financiera con el respaldo t&eacute;cnico de Tecnegia.</p>
-                <a href="mailto:tecnegia@gmail.com">Contactar con Soporte</a>
+            <div style="background: #002147; color: white; border-radius: 20px; padding: 60px; text-align: center; margin-top: 80px;">
+                <h2 style="font-weight: 700; margin-bottom: 20px; font-size: 2.5rem;">&iquest;Necesitas una implementaci&oacute;n a medida?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Optimiza tu gesti&oacute;n financiera con el respaldo t&eacute;cnico de Tecnegia.</p>
+                <a href="mailto:tecnegia@gmail.com" style="display: inline-block; background: #3a86ff; color: white; padding: 15px 40px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 1.1rem;">Contactar con Soporte</a>
             </div>
         </div>
     </section>
-
 </body>
 
 </html>
