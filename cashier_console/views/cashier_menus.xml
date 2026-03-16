@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_cashier_console_root" name="Cashier Console" sequence="10"/>
+
+    <menuitem id="menu_cashier_console_dashboard" name="Dashboard" parent="menu_cashier_console_root" action="action_cashier_console_sessions" sequence="10"/>
+    <menuitem id="menu_cashier_console_orders" name="Orders" parent="menu_cashier_console_root" action="action_cashier_console_orders" sequence="20"/>
+    <menuitem id="menu_cashier_console_configuration" name="Configuration" parent="menu_cashier_console_root" sequence="90" groups="base.group_system"/>
+    <menuitem id="menu_cashier_console_settings" name="Settings" parent="menu_cashier_console_configuration" action="res_config_settings_view_form_cashier_console" sequence="1" groups="base.group_system"/>
+</odoo>
