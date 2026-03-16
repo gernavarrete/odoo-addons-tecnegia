@@ -157,6 +157,7 @@ msgstr "Aprobar límite"
 #: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__available_credit
 #: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__available_credit
 #: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__available_credit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order__partner_available_credit
 msgid "Available Credit"
 msgstr "Crédito disponible"
 
@@ -395,6 +396,7 @@ msgstr "Estado del crédito"
 #: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__credit_used
 #: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__credit_used
 #: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__credit_used
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order__partner_credit_used
 msgid "Credit Used"
 msgstr "Crédito utilizado"
 
@@ -832,6 +834,7 @@ msgstr ""
 #: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__credit_limit_total_custom
 #: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__credit_limit_total_custom
 #: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__credit_limit_total_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order__partner_credit_limit
 msgid "Total Credit Limit"
 msgstr "Límite total de crédito"
 
@@ -1015,3 +1018,17 @@ msgstr "Bloquear Cuenta"
 #. module: credit_limit_custom
 msgid "Reapertura de Cuenta"
 msgstr "Reapertura de Cuenta"
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_sale_order__partner_available_credit
+msgid "Current available credit for the customer."
+msgstr "Crédito disponible actual para el cliente."
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_sale_order__partner_credit_limit
+msgid "Total credit limit assigned to the customer."
+msgstr "Límite de crédito total asignado al cliente."
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_sale_order__partner_credit_used
+msgid "Amount of credit already used by the customer."
+msgstr "Monto de crédito ya utilizado por el cliente."
