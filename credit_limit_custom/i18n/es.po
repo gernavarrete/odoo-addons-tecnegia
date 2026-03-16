@@ -1,0 +1,1017 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: credit_limit_custom 19.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-25 03:32+0000\n"
+"PO-Revision-Date: 2025-11-25 03:32+0000\n"
+"Last-Translator: Technogia\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: ChatGPT Translation Builder\n"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/credit_account_change.py:0
+msgid "%s requested to %s the Credit Account."
+msgstr "%s solicitó %s la Cuenta Corriente."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "<i class=\"fa fa-exclamation-triangle\"/>  You are about to <b>CLOSE</b> the credit account."
+msgstr "<i class=\"fa fa-exclamation-triangle\"></i> Está a punto de <b>CERRAR</b> la cuenta corriente."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "<i class=\"fa fa-info-circle\"/> Enter the <b>NEW TOTAL LIMIT</b> desired. (Example: If they have $1000 and want $500 more, enter $1500)."
+msgstr "<i class=\"fa fa-info-circle\"></i> Ingrese el <b>NUEVO LÍMITE TOTAL</b> deseado. (Ejemplo: si tiene $1000 y desea $500 adicionales, ingrese $1500)."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "<i class=\"fa fa-refresh\"/> You are updating the limit of an active account. Enter the new total."
+msgstr "<i class=\"fa fa-refresh\"></i> Está actualizando el límite de una cuenta activa. Ingrese el nuevo total."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "A new credit limit request of %s is pending analysis."
+msgstr "Una nueva solicitud de límite de crédito por %s está pendiente de análisis."
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__action_type
+msgid "Action"
+msgstr "Acción"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Actualizar Límite de Crédito"
+msgstr "Actualizar Límite de Crédito"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_config_settings_view_form
+msgid "Add the sales discount limit"
+msgstr "Agregar el límite de descuento en ventas"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__description
+msgid "Additional Details"
+msgstr "Detalles adicionales"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "Additional details..."
+msgstr "Detalles adicionales..."
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_account_bank_statement_line__current_account_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_account_move__current_account_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_credit_account_change__is_open_already
+#: model:ir.model.fields,help:credit_limit_custom.field_res_partner__current_account_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_res_users__current_account_custom
+msgid "Allows processing credit orders or checks the limit validation."
+msgstr "Permite procesar pedidos a crédito o revisar la validación del límite."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Analizar Documentación"
+msgstr "Analizar documentación"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Analysis completed for %s"
+msgstr "Análisis completado para %s"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Analysis completed."
+msgstr "Análisis completado."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Analyze Risk"
+msgstr "Analizar riesgo"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__res_partner__credit_limit_state__analyzed
+msgid "Analyzed"
+msgstr "Analizado"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Approve Limit"
+msgstr "Aprobar límite"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__res_partner__credit_limit_state__approved
+msgid "Approved"
+msgstr "Aprobado"
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__credit_limit_custom
+msgid "Approved Credit Limit"
+msgstr "Límite de crédito aprobado"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Approved by %s."
+msgstr "Aprobado por %s."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Aprobar Límite"
+msgstr "Aprobar límite"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_bank_statement_line__available_credit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__available_credit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__available_credit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__available_credit
+msgid "Available Credit"
+msgstr "Crédito disponible"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/credit_account_change.py:0
+msgid "CLOSE"
+msgstr "CERRAR"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__can_approve_credit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__can_approve_credit
+msgid "Can Approve Credit"
+msgstr "Puede aprobar crédito"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__can_request_credit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__can_request_credit
+msgid "Can Request Credit"
+msgstr "Puede solicitar crédito"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,comment:credit_limit_custom.group_credit_limit_approver
+msgid "Can approve/reject the credit limit/Credit Account request."
+msgstr "Puede aprobar o rechazar la solicitud de límite de crédito / cuenta corriente."
+
+
+#. module: credit_limit_custom
+#: model:res.groups,comment:credit_limit_custom.group_nota_credito
+msgid "Can create credit notes manually."
+msgstr "Puede crear notas de crédito manualmente."
+
+
+#. module: credit_limit_custom
+#: model:res.groups,comment:credit_limit_custom.group_credit_limit_applicant
+msgid "Can create/modify the initial credit limit/Credit Account request."
+msgstr "Puede crear o modificar la solicitud inicial de límite de crédito / cuenta corriente."
+
+
+#. module: credit_limit_custom
+#: model:res.groups,comment:credit_limit_custom.group_discount_limit_manager
+msgid "Can modify discount limits on configuration."
+msgstr "Puede modificar los límites de descuento en la configuración."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_upload_credit_document_form
+msgid "Cancel"
+msgstr "Cancelar"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__credit_account_change__action_type__close
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Close Account"
+msgstr "Cerrar cuenta"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_res_config_settings
+msgid "Config Settings"
+msgstr "Configuración"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "Confirm Change"
+msgstr "Confirmar cambio"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/sale_order.py:0
+msgid ""
+"Confirmation Denied:\n"
+"\n"
+"Customer '%s' does not have the Credit Account enabled."
+msgstr ""
+"Confirmación denegada:\n"
+"\n"
+"El cliente '%s' no tiene la cuenta corriente habilitada."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/sale_order.py:0
+msgid ""
+"Confirmation Denied:\n"
+"\n"
+"The order (%(order_total)s) exceeds the available credit limit for customer '%(partner_name)s'.\n"
+"\n"
+"Available Credit: %(available_credit)s\n"
+"\n"
+"Contact the responsible person."
+msgstr ""
+"Confirmación denegada:\n"
+"\n"
+"El pedido (%(order_total)s) excede el límite de crédito disponible para el cliente '%(partner_name)s'.\n"
+"\n"
+"Crédito disponible: %(available_credit)s\n"
+"\n"
+"Contacte a la persona responsable."
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_res_partner
+msgid "Contact"
+msgstr "Contacto"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,name:credit_limit_custom.group_nota_credito
+msgid "Create Credit Note"
+msgstr "Crear nota de crédito"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,website_form_label:credit_limit_custom.model_res_partner
+msgid "Create a Customer"
+msgstr "Crear un cliente"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__create_uid
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__create_uid
+msgid "Created by"
+msgstr "Creado por"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__create_date
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__create_date
+msgid "Created on"
+msgstr "Creado el"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_bank_statement_line__current_account_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__current_account_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__is_open_already
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__current_account_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__current_account_custom
+msgid "Credit Account"
+msgstr "Cuenta corriente"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_credit_account_change
+msgid "Credit Account Change Wizard"
+msgstr "Asistente de cambio de cuenta corriente"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Credit Account Management"
+msgstr "Gestión de cuenta corriente"
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Credit Account check %s by %s."
+msgstr "Verificación de cuenta corriente %s por %s."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Credit Configuration"
+msgstr "Configuración de crédito"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Credit Limit"
+msgstr "Límite de crédito"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,name:credit_limit_custom.group_credit_limit_approver
+msgid "Credit Limit Administrator (Approver)"
+msgstr "Administrador del límite de crédito (Aprobador)"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,name:credit_limit_custom.group_credit_limit_applicant
+msgid "Credit Limit Applicant"
+msgstr "Solicitante de límite de crédito"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "Credit Limit Request"
+msgstr "Solicitud de límite de crédito"
+
+
+#. module: credit_limit_custom
+#: model:res.groups.privilege,name:credit_limit_custom.privilege_credit_workflow
+msgid "Credit Limit Workflow"
+msgstr "Flujo de límite de crédito"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.account_move_form_inherit
+msgid "Credit Note"
+msgstr "Nota de crédito"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,name:credit_limit_custom.group_credit_risk_analyst
+msgid "Credit Risk Analyst"
+msgstr "Analista de riesgo crediticio"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__credit_limit_state
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__credit_limit_state
+msgid "Credit Status"
+msgstr "Estado del crédito"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_bank_statement_line__credit_used
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__credit_used
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__credit_used
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__credit_used
+msgid "Credit Used"
+msgstr "Crédito utilizado"
+
+
+#. module: credit_limit_custom
+#: model:ir.module.category,name:credit_limit_custom.module_credit_limit_category
+msgid "Credit and Discount Management"
+msgstr "Gestión de créditos y descuentos"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/upload_credit_document.py:0
+msgid "Credit documentation uploaded: %s"
+msgstr "Documentación de crédito cargada: %s"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Credit limits cannot be negative"
+msgstr "Los límites de crédito no pueden ser negativos"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__currency_id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__currency_id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__currency_id
+msgid "Currency"
+msgstr "Moneda"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__current_credit_limit
+msgid "Current Approved Limit"
+msgstr "Límite aprobado actual"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Current Status"
+msgstr "Estado actual"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__partner_id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__partner_id
+msgid "Customer"
+msgstr "Cliente"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/credit_account_change.py:0
+msgid "Details"
+msgstr "Detalles"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/sale_order_discount.py:0
+msgid "Discount %(percent)s%%"
+msgstr "Descuento de %(percent)s%%"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/sale_order_discount.py:0
+msgid "Discount %(percent)s%%- On products with the following taxes %(taxes)s"
+msgstr "Descuento de %(percent)s%% - En productos con los siguientes impuestos: %(taxes)s"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,name:credit_limit_custom.group_discount_limit_manager
+msgid "Discount Limit Manager"
+msgstr "Responsable de límites de descuento"
+
+
+#. module: credit_limit_custom
+#: model:res.groups.privilege,name:credit_limit_custom.privilege_discount_management
+msgid "Discount Management"
+msgstr "Gestión de descuentos"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_sale_order_discount
+msgid "Discount Wizard"
+msgstr "Asistente de descuentos"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/sale_order_discount.py:0
+msgid "Discount- On products with the following taxes %(taxes)s"
+msgstr "Descuento - En productos con los siguientes impuestos: %(taxes)s"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_payment__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_payment_term__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_company__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order_discount__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order_line__display_name
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__display_name
+msgid "Display Name"
+msgstr "Nombre para mostrar"
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__description
+msgid "Document Description"
+msgstr "Descripción del documento"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__res_partner__credit_limit_state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_upload_credit_document__description
+msgid "E.g. Balance Sheet 2024"
+msgstr "Ej. Estado de resultados 2024"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_credit_account_change__reason
+msgid "E.g. Customer request, Payment default, etc."
+msgstr "Ej. Solicitud del cliente, falta de pago, etc."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "E.g. Sales increase, folder update..."
+msgstr "Ej. Aumento de ventas, actualización de carpeta..."
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,help:credit_limit_custom.field_credit_account_change__amount
+msgid "Enter the FINAL total amount desired (Current + Increase)."
+msgstr "Ingrese el monto total FINAL deseado (Actual + Aumento)."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_upload_credit_document_form
+msgid "Ex: Balance 2024, Informe Nosis, etc."
+msgstr "Ej.: Balance 2024, Informe Nosis, etc."
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__file_data
+msgid "File"
+msgstr "Archivo"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__file_name
+msgid "File Name"
+msgstr "Nombre del archivo"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__has_permission_to_change
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__has_permission_to_change
+msgid "Has Permission to Change"
+msgstr "Tiene permiso para cambiar"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_payment__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_payment_term__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_company__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_config_settings__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order_discount__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_sale_order_line__id
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__id
+msgid "ID"
+msgstr "ID"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_account_move
+msgid "Journal Entry"
+msgstr "Asiento contable"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "Justification"
+msgstr "Justificación"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__write_uid
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__write_uid
+msgid "Last Updated by"
+msgstr "Última actualización por"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__write_date
+#: model:ir.model.fields,field_description:credit_limit_custom.field_upload_credit_document__write_date
+msgid "Last Updated on"
+msgstr "Última actualización el"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_config_settings_view_form
+msgid "Limit Calculation"
+msgstr "Cálculo del límite"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "Limit Information"
+msgstr "Información del límite"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Limit modified by %s."
+msgstr "Límite modificado por %s."
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__reason
+msgid "Main Reason"
+msgstr "Motivo principal"
+
+
+#. module: credit_limit_custom
+#: model:ir.module.category,description:credit_limit_custom.module_credit_limit_category
+msgid "Manages permissions for credit limits and sales discounts."
+msgstr "Gestiona los permisos de límites de crédito y descuentos en ventas."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "New Request (Information)"
+msgstr "Nueva solicitud (informativa)"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/credit_account_change.py:0
+msgid "New Requested Total"
+msgstr "Nuevo total solicitado"
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_credit_account_change__amount
+msgid "New Requested Total Limit"
+msgstr "Nuevo límite total solicitado"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/credit_account_change.py:0
+msgid "OPEN"
+msgstr "ABRIR"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Only Approver."
+msgstr "Solo el aprobador."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Only Risk Analyst."
+msgstr "Solo el analista de riesgo."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Only the Approving Administrator can modify the 'Approved Credit Limit' field."
+msgstr "Solo el administrador aprobador puede modificar el campo 'Límite de crédito aprobado'."
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__credit_account_change__action_type__open
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Open Account"
+msgstr "Abrir cuenta"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_account_payment_term
+msgid "Payment Terms"
+msgstr "Términos de pago"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_account_payment
+msgid "Payments"
+msgstr "Pagos"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/wizard/credit_account_change.py:0
+msgid "Reason"
+msgstr "Motivo"
+
+
+#. module: credit_limit_custom
+#: model:res.groups,comment:credit_limit_custom.group_credit_risk_analyst
+msgid "Receives requests and prepares documentation for approval."
+msgstr "Recibe solicitudes y prepara documentación para aprobación."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Rechazar Solicitud"
+msgstr "Rechazar solicitud"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__res_partner__credit_limit_state__rejected
+msgid "Rejected"
+msgstr "Rechazado"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Rejected by %s."
+msgstr "Rechazado por %s."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Request for %s"
+msgstr "Solicitud para %s"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields.selection,name:credit_limit_custom.selection__res_partner__credit_limit_state__requested
+msgid "Requested"
+msgstr "Solicitado"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__requested_credit_limit
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__requested_credit_limit
+msgid "Requested Credit Limit"
+msgstr "Límite de crédito solicitado"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_company__limit_discount
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_config_settings__limit_discount
+msgid "Sales Discount Limit"
+msgstr "Límite de descuento en ventas"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_company__limit_line_discount
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_config_settings__limit_line_discount
+msgid "Sales Line Discount Limit"
+msgstr "Límite de descuento por línea de venta"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_sale_order
+msgid "Sales Order"
+msgstr "Orden de venta"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Línea de orden de venta"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_payment_term__skip_credit_limit
+msgid "Skip Credit Limit Validation"
+msgstr "Saltar validación de límite de crédito"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Solicitar Aprobación"
+msgstr "Solicitar aprobación"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Stage completed or rejected."
+msgstr "Etapa completada o rechazada."
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Subir Documentación"
+msgstr "Subir documentación"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid ""
+"This invoice/order would exceed the available credit limit.\n"
+"Credit Limit: %s\n"
+"Credit Used: %s\n"
+"Available: %s\n"
+"Amount Attempted: %s"
+msgstr ""
+"Esta factura/orden excedería el límite de crédito disponible.\n"
+"Límite de crédito: %s\n"
+"Crédito utilizado: %s\n"
+"Disponible: %s\n"
+"Monto intentado: %s"
+
+
+#. module: credit_limit_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_bank_statement_line__credit_limit_total_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_account_move__credit_limit_total_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_partner__credit_limit_total_custom
+#: model:ir.model.fields,field_description:credit_limit_custom.field_res_users__credit_limit_total_custom
+msgid "Total Credit Limit"
+msgstr "Límite total de crédito"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Update Limit"
+msgstr "Actualizar límite"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_upload_credit_document_form
+msgid "Upload"
+msgstr "Cargar"
+
+
+#. module: credit_limit_custom
+#: model:ir.model,name:credit_limit_custom.model_upload_credit_document
+msgid "Upload Credit Documentation"
+msgstr "Cargar documentación de crédito"
+
+
+#. module: credit_limit_custom
+#: model:ir.actions.act_window,name:credit_limit_custom.action_upload_credit_document
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_upload_credit_document_form
+msgid "Upload Documentation"
+msgstr "Cargar documentación"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_config_settings_view_form
+msgid "Use the sales discount limit."
+msgstr "Usar el límite de descuento en ventas."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "User %s requests a credit limit increase to %s."
+msgstr "El usuario %s solicita un aumento del límite de crédito a %s."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/sale_order_line.py:0
+#: code:addons/credit_limit_custom/wizard/sale_order_discount.py:0
+msgid "You cannot add a discount greater than the established limit, which is: %s"
+msgstr "No puede agregar un descuento mayor al límite establecido, que es: %s"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "You do not have permission to request."
+msgstr "No tiene permiso para realizar esta solicitud."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/sale_order.py:0
+msgid ""
+"You do not have permission to request the opening or modification of a credit limit."
+msgstr ""
+"No tiene permiso para solicitar la apertura o modificación de un límite de crédito."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "activated"
+msgstr "activado"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "deactivated"
+msgstr "desactivado"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.account_move_form_inherit
+msgid "Analizar Documentación"
+msgstr "Analizar documentación"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Gestión de Cuenta Corriente"
+msgstr "Gestión de cuenta corriente"
+
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.res_partner_inherit
+msgid "Actualizar Límite"
+msgstr "Actualizar límite"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "User %s %s the Credit Account check."
+msgstr "El usuario %s %s la verificación de la cuenta corriente."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "User %s has requested the opening of a Credit Account and/or a Credit Limit of %s for customer %s. Please review the documentation and proceed to Analyze."
+msgstr "El usuario %s ha solicitado la apertura de una cuenta corriente y/o un límite de crédito de %s para el cliente %s. Por favor, revise la documentación y proceda a analizar."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid ""
+"This invoice would exceed the available credit limit.\n"
+"Credit Limit: %s\n"
+"Credit Used: %s\n"
+"Available: %s\n"
+"Invoice Amount: %s"
+msgstr ""
+"Esta factura excedería el límite de crédito disponible.\n"
+"Límite de crédito: %s\n"
+"Crédito utilizado: %s\n"
+"Disponible: %s\n"
+"Monto de la factura: %s"
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Credit Risk Analyst %s has completed the document review."
+msgstr "El analista de riesgo %s ha completado la revisión de la documentación."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Administrator %s has APPROVED the final credit limit of %s."
+msgstr "El administrador %s ha APROBADO el límite de crédito final de %s."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Administrator %s has REJECTED the credit limit request."
+msgstr "El administrador %s ha RECHAZADO la solicitud de límite de crédito."
+
+
+#. module: credit_limit_custom
+#. odoo-python
+#: code:addons/credit_limit_custom/models/res_partner.py:0
+msgid "Administrator %s modified the Credit Limit from %s to %s."
+msgstr "El administrador %s modificó el límite de crédito de %s a %s."
+
+#. module: credit_limit_custom
+#: model_terms:ir.ui.view,arch_db:credit_limit_custom.view_credit_account_change_form
+msgid "Enter the NEW TOTAL LIMIT desired. (Example: If they have $1000 and want $500 more, enter $1500)."
+msgstr "Ingrese el NUEVO LÍMITE TOTAL deseado. (Ejemplo: Si tiene $1000 y desea $500 adicionales, ingrese $1500)."
+#. module: credit_limit_custom
+msgid "Account Blocked by Analyst"
+msgstr "Cuenta Bloqueada por Analista"
+
+#. module: credit_limit_custom
+msgid "Only the Credit Risk Analyst can perform this action."
+msgstr "Solo el Analista de Riesgo Crediticio puede realizar esta acción."
+
+#. module: credit_limit_custom
+msgid "⛔ Account BLOCKED by Analyst (Payment Pending)."
+msgstr "⛔ Cuenta BLOQUEADA por Analista (Falta de Pago)."
+
+#. module: credit_limit_custom
+msgid "✅ Account RE-OPENED by Analyst. Credit restored."
+msgstr "✅ Cuenta RE-ABIERTA por Analista. Crédito restaurado."
+
+#. module: credit_limit_custom
+msgid "Bloquear Cuenta"
+msgstr "Bloquear Cuenta"
+
+#. module: credit_limit_custom
+msgid "Reapertura de Cuenta"
+msgstr "Reapertura de Cuenta"

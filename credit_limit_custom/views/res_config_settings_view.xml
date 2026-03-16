@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Settings in Sales app (Discount Limits) -->
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.sale.inherit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="sale.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//block[@name='catalog_setting_container']" position="after">
+                    <block title="Limit Calculation" id="limit_totals"
+                        groups="credit_limit_custom.group_discount_limit_manager">
+                        <setting id="limit_totals" help="Add the sales discount limit"
+                            title="Use the sales discount limit.">
+                            <group>
+                                <field name="limit_line_discount" />
+                            </group>
+                            <group>
+                                <field name="limit_discount" />
+                            </group>
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- Settings in Accounting app (Credit Workflow Delegation) -->
+        <record id="res_config_settings_view_form_account" model="ir.ui.view">
+            <field name="name">res.config.settings.view.form.inherit.account.credit</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="account.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//block[@id='invoicing_settings']" position="after">
+                    <block title="Credit Workflow" id="credit_workflow_settings"
+                        groups="credit_limit_custom.group_credit_limit_approver">
+                        <setting id="analyst_approval_setting"
+                            string="Analyst Approval Delegation"
+                            help="Allow the Credit Risk Analyst to also approve or reject credit limit requests on your behalf.">
+                            <field name="analyst_can_approve_credit" />
+                        </setting>
+                    </block>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

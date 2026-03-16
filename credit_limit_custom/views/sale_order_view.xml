@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_order_form_credit_limit_custom" model="ir.ui.view">
+        <field name="name">sale.order.form.credit.info</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="partner_credit_limit" invisible="partner_credit_limit == 0" widget="monetary" />
+                <field name="partner_credit_used" invisible="partner_credit_limit == 0" widget="monetary" />
+                <field name="partner_available_credit" invisible="partner_credit_limit == 0" widget="monetary" decoration-danger="partner_available_credit &lt; 0" decoration-warning="partner_available_credit == 0" decoration-success="partner_available_credit &gt; 0" />
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
