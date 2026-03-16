@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem id="menu_cashier_console_root" name="Cashier Console" sequence="10" />
+
+    <record id="action_cashier_console_invoices_dashboard" model="ir.actions.act_window">
+        <field name="name">Invoices</field>
+        <field name="res_model">account.move</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('move_type', '=', 'out_invoice')]</field>
+        <field name="context">{'default_move_type': 'out_invoice'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new invoice
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_cashier_console_dashboard"
+        name="Dashboard"
+        parent="menu_cashier_console_root"
+        action="action_cashier_console_invoices_dashboard"
+        sequence="10" />
+
+    <record id="action_cashier_console_sale_orders" model="ir.actions.act_window">
+        <field name="name">Sales Orders</field>
+        <field name="res_model">sale.order</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new quotation, the first step of a new sale!
+            </p>
+        </field>
+    </record>
+    <menuitem id="menu_cashier_console_orders"
+        name="Orders"
+        parent="menu_cashier_console_root"
+        action="action_cashier_console_sale_orders"
+        sequence="20" />
+
+    <menuitem id="menu_cashier_console_config_boxes"
+        name="Cashier Boxes"
+        parent="menu_cashier_console_root"
+        action="action_cashier_config"
+        sequence="30"
+        groups="pos_cashier_extension.group_cashier_console_manager" />
+
+    <menuitem id="menu_cashier_console_configuration_root" name="Configuration"
+        parent="menu_cashier_console_root" sequence="90" groups="base.group_system" />
+
+    <!-- Acción para administrar cashier.payment.method -->
+    <record id="action_cashier_payment_method" model="ir.actions.act_window">
+        <field name="name">Payment Methods</field>
+        <field name="res_model">cashier.payment.method</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create and configure the payment methods available in the Cashier Console.
+            </p>
+        </field>
+    </record>
+
+    <!-- Menú Configuración ▸ Payment Methods -->
+    <menuitem
+        id="menu_cashier_console_payment_methods"
+        name="Payment Methods"
+        parent="menu_cashier_console_configuration_root"
+        action="action_cashier_payment_method"
+        sequence="20"
+        groups="pos_cashier_extension.group_cashier_console_manager" />
+
+
+    <record id="action_cashier_console_settings" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.config.settings</field>
+        <field name="view_id" ref="base.res_config_settings_view_form" />
+        <field name="view_mode">form</field>
+        <field name="target">inline</field>
+        <field name="context">{'module' : 'pos_cashier_extension'}</field>
+    </record>
+
+    <menuitem id="menu_cashier_console_settings"
+        name="Settings"
+        parent="menu_cashier_console_configuration_root"
+        action="action_cashier_console_settings"
+        sequence="1"
+        groups="base.group_system" />
+</odoo>

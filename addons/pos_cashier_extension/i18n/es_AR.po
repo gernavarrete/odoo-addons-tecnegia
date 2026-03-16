@@ -1,0 +1,944 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* pos_cashier_extension
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 18.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-13 18:00+0000\n"
+"PO-Revision-Date: 2025-11-13 18:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_console_sessions
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_root
+msgid "Cashier Console"
+msgstr "Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_dashboard
+msgid "Dashboard"
+msgstr "Tablero"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_console_orders
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_orders
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__order_ids
+msgid "Orders"
+msgstr "Órdenes"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_configuration
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_console_settings
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_settings
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Settings"
+msgstr "Ajustes"
+
+#. module: pos_cashier_extension
+#: model:ir.model,name:pos_cashier_extension.model_cashier_console_session
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Cashier session"
+msgstr "Sesión de caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__name
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_order__name
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__employee_id
+msgid "Employee"
+msgstr "Empleado"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__user_id
+msgid "User"
+msgstr "Usuario"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__cashier_console_session__state__draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__cashier_console_session__state__open
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Open"
+msgstr "Abierto"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__cashier_console_session__state__close
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Closed"
+msgstr "Cerrado"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__opening_amount
+msgid "Opening amount"
+msgstr "Monto de apertura"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__closing_amount
+msgid "Closing amount"
+msgstr "Monto de cierre"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__to_invoice_count
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__cashier_console_order__state__to_invoice
+msgid "To invoice"
+msgstr "A facturar"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_session__invoiced_count
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__cashier_console_order__state__invoiced
+msgid "Invoiced"
+msgstr "Facturado"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_console_orders
+msgid "Cashier orders"
+msgstr "Órdenes de caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model,name:pos_cashier_extension.model_cashier_console_order
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_form
+msgid "Cashier order"
+msgstr "Orden de caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_order__session_id
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_payment_wizard__session_id
+msgid "Session"
+msgstr "Sesión"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_order__sale_order_id
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_payment_wizard__order_id
+msgid "Sales Order"
+msgstr "Orden de venta"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_order__invoice_id
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_console_order__amount_total
+msgid "Total"
+msgstr "Total"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_tree
+msgid "Collect"
+msgstr "Cobrar"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_form
+msgid "Open order"
+msgstr "Abrir orden"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_form
+msgid "Open document"
+msgstr "Abrir documento"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_payment_wizard
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_payment_wizard
+msgid "Register payment"
+msgstr "Registrar pago"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_cashbox_name
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_config_settings__cashier_console_cashbox_name
+msgid "Cashbox name"
+msgstr "Nombre de la caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_payment_method_ids
+msgid "Cashier payment methods"
+msgstr "Métodos de pago de caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_config_settings__cashier_console_payment_method_ids
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_payment_wizard__journal_id
+msgid "Payment methods"
+msgstr "Métodos de pago"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_cash_rounding_method_id
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_config_settings__cashier_console_cash_rounding_method_id
+msgid "Cash rounding"
+msgstr "Redondeo de efectivo"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,help:pos_cashier_extension.field_res_company__cashier_console_cash_rounding_method_id
+msgid "Rounding method applied to cashier cash payments."
+msgstr "Método de redondeo aplicado a los pagos en efectivo en caja."
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_login_as_employee
+msgid "Login as employee"
+msgstr "Ingresar como empleado"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_allow_employee_switch
+msgid "Allow employee switch"
+msgstr "Permitir cambio de empleado"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_basic_permissions
+msgid "Basic level"
+msgstr "Nivel básico"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__res_company__cashier_console_basic_permissions__restricted
+msgid "Basic permissions"
+msgstr "Permisos básicos"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__res_company__cashier_console_basic_permissions__standard
+msgid "Standard permissions"
+msgstr "Permisos estándar"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_advanced_permissions
+msgid "Advanced permissions"
+msgstr "Permisos avanzados"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields.selection,name:pos_cashier_extension.selection__res_company__cashier_console_advanced_permissions__none
+msgid "No advanced permissions"
+msgstr "Sin permisos avanzados"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_default_tax_id
+msgid "Default sales tax"
+msgstr "Impuesto de venta predeterminado"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_temp_account_id
+msgid "Default temporary account"
+msgstr "Cuenta transitoria predeterminada"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_default_order_journal_id
+msgid "Default order journal"
+msgstr "Diario de órdenes predeterminado"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_default_invoice_journal_id
+msgid "Default invoice journal"
+msgstr "Diario de facturas predeterminado"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_auto_invoice
+msgid "Auto invoice"
+msgstr "Facturación automática"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_print_portal_info
+msgid "Print portal info on receipts"
+msgstr "Imprimir info del portal en recibos"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,help:pos_cashier_extension.field_res_company__cashier_console_print_portal_info
+msgid "Include the portal URL on printed receipts."
+msgstr "Incluir la URL del portal en los recibos impresos."
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_send_receipt_whatsapp
+msgid "Send receipts via WhatsApp"
+msgstr "Enviar recibos por WhatsApp"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_foreign_currency_journal_id
+msgid "Foreign currency collection journal"
+msgstr "Diario de cobro en moneda extranjera"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_res_company__cashier_console_local_currency_journal_id
+msgid "Local currency collection journal"
+msgstr "Diario de cobro en moneda local"
+
+#. module: pos_cashier_extension
+#: model:ir.model,name:pos_cashier_extension.model_cashier_payment_wizard
+msgid "Cashier Console payment wizard"
+msgstr "Asistente de pago de consola de caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_payment_wizard__amount
+msgid "Amount to collect"
+msgstr "Importe a cobrar"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_payment_wizard__communication
+msgid "Receipt reference"
+msgstr "Referencia del recibo"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Cashier Console Settings"
+msgstr "Ajustes de Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Cashbox"
+msgstr "Caja"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Accounting"
+msgstr "Contabilidad"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Permissions"
+msgstr "Permisos"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_payment_wizard
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_payment_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/wizard/cashier_payment_wizard.py:0
+#, python-format
+msgid "A payment of %s was registered for %s"
+msgstr "Se registró un pago de %s para %s"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_console_invoices_dashboard
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_console_sale_orders
+msgid "Sales Orders"
+msgstr "Órdenes de Venta"
+
+#. module: pos_cashier_extension
+#: model:ir.model.group,name:pos_cashier_extension.group_cashier_console_user
+msgid "Cashier Console / User"
+msgstr "Consola de Caja / Usuario"
+
+#. module: pos_cashier_extension
+#: model:ir.model.group,comment:pos_cashier_extension.group_cashier_console_user
+msgid "The user can access the Cashier Console."
+msgstr "El usuario puede acceder a la Consola de Caja."
+
+#. module: pos_cashier_extension
+#: model:ir.model.group,name:pos_cashier_extension.group_cashier_console_manager
+msgid "Cashier Console / Manager"
+msgstr "Consola de Caja / Administrador"
+
+#. module: pos_cashier_extension
+#: model:ir.model.group,comment:pos_cashier_extension.group_cashier_console_manager
+msgid "The user can manage Cashier Console settings and operations."
+msgstr "El usuario puede gestionar la configuración y operaciones de la Consola de Caja."
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "You don't have the permissions to open a cashier session."
+msgstr "No tienes permisos para abrir una sesión de caja."
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "You don't have the permissions to close a cashier session."
+msgstr "No tienes permisos para cerrar una sesión de caja."
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "PIN verification is required to open the session. This feature needs a UI implementation (wizard)."
+msgstr "Se requiere verificación de PIN para abrir la sesión. Esta funcionalidad necesita una implementación de interfaz de usuario (asistente)."
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "PIN verification is required to close the session. This feature needs a UI implementation (wizard)."
+msgstr "Se requiere verificación de PIN para cerrar la sesión. Esta funcionalidad necesita una implementación de interfaz de usuario (asistente)."
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "Only draft sessions can be opened."
+msgstr "Solo las sesiones en estado borrador pueden ser abiertas."
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "Only open sessions can be closed."
+msgstr "Solo las sesiones abiertas pueden ser cerradas."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,name:pos_cashier_extension.view_users_form_inherit_cashier_console
+msgid "Cashier Console"
+msgstr "Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_users_form_inherit_cashier_console
+msgid "Cashier Console PIN"
+msgstr "PIN de Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model,name:pos_cashier_extension.model_cashier_pin_wizard
+msgid "Cashier PIN Verification"
+msgstr "Verificación de PIN de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_pin_wizard__pin
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_pin_wizard_form
+msgid "PIN"
+msgstr "PIN"
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/wizard/cashier_pin_wizard.py:0
+#, python-format
+msgid "Incorrect PIN."
+msgstr "PIN incorrecto."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_pin_wizard_form
+msgid "Please enter your PIN"
+msgstr "Por favor ingrese su PIN"
+
+#. module: pos_cashier_extension
+#: code:addons/pos_cashier_extension/models/cashier_console_session.py:0
+#, python-format
+msgid "Enter PIN"
+msgstr "Ingresar PIN"
+
+#. module: pos_cashier_extension
+#: model:ir.module.category,name:pos_cashier_extension.module_category_cashier_console
+msgid "Cashier Console"
+msgstr "Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:res.groups,name:pos_cashier_extension.group_cashier_console_user
+msgid "User"
+msgstr "Usuario"
+
+#. module: pos_cashier_extension
+#: model:res.groups,name:pos_cashier_extension.group_cashier_console_manager
+msgid "Administrator"
+msgstr "Administrador"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,name:pos_cashier_extension.view_cashier_config_list
+msgid "Cashier Console Configuration"
+msgstr "Configuración de Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model,name:pos_cashier_extension.model_cashier_config
+msgid "Cashier Console Configuration"
+msgstr "Configuración de Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_config__name
+msgid "Cashier Box Name"
+msgstr "Nombre de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_config__journal_id
+msgid "Sales Journal"
+msgstr "Diario de Ventas"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_config__cash_journal_id
+msgid "Cash Journal"
+msgstr "Diario de Efectivo"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_config
+msgid "Cashier Boxes"
+msgstr "Cajas de la Consola"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Cashier Console"
+msgstr "Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Cashier Box Configurations"
+msgstr "Configuraciones de Cajas"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Manage your Cashier Console boxes (e.g., Main Counter, Express Lane)."
+msgstr "Gestione sus configuraciones de Cajas (ej. Mostrador Principal, Caja Rápida)."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Manage Cashier Boxes"
+msgstr "Gestionar Cajas"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_config_form
+msgid "Cashier Console Box"
+msgstr "Configuración de Caja"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Receipts"
+msgstr "Recibos"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Name of this cashbox (e.g., Main Counter)."
+msgstr "Nombre de esta caja (ej. Mostrador Principal)."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Journals available for payment in the console."
+msgstr "Diarios disponibles para pago en la consola."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Rounding method applied to cash payments."
+msgstr "Método de redondeo aplicado a pagos en efectivo."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Local Currency Journal"
+msgstr "Diario de Moneda Local"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Default journal for local currency payments."
+msgstr "Diario predeterminado para pagos en moneda local."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Foreign Currency Journal"
+msgstr "Diario de Moneda Extranjera"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Default journal for foreign currency payments."
+msgstr "Diario predeterminado para pagos en moneda extranjera."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Enable logging in as an employee."
+msgstr "Habilitar inicio de sesión como empleado."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Allow switching between employees."
+msgstr "Permitir alternar entre empleados."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Set the basic permission level."
+msgstr "Establecer el nivel de permiso básico."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Set the advanced permission level."
+msgstr "Establecer el nivel de permiso avanzado."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Default tax applied to sales."
+msgstr "Impuesto predeterminado aplicado a las ventas."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Default temporary account for transactions."
+msgstr "Cuenta temporal predeterminada para transacciones."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Default journal for orders."
+msgstr "Diario predeterminado para órdenes."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Default journal for invoices."
+msgstr "Diario predeterminado para facturas."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Automatically create invoices."
+msgstr "Crear facturas automáticamente."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Print portal info"
+msgstr "Imprimir información del portal"
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Include portal URL on receipts."
+msgstr "Incluir la URL del portal en los recibos."
+
+#. module: pos_cashier_extension
+#: model_terms:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form_cashier_console
+msgid "Enable sending receipts via WhatsApp."
+msgstr "Habilitar el envío de recibos por WhatsApp."
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_config
+msgid "Cashier Boxes"
+msgstr "Cajas de la Consola"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Set default values"
+msgstr "Establecer valores predeterminados"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "User Interface"
+msgstr "Interfaz de usuario"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Model:"
+msgstr "Modelo:"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "res.config.settings"
+msgstr "res.config.settings"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Action"
+msgstr "Acción"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "View: Form"
+msgstr "Vista: Formulario"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Fields"
+msgstr "Campos"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Filters"
+msgstr "Filtros"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Computed Architecture"
+msgstr "Arquitectura calculada"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Security"
+msgstr "Seguridad"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Access Rights"
+msgstr "Permisos de acceso"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Record Rules"
+msgstr "Reglas de registro"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Testing"
+msgstr "Prueba"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Run Unit Tests"
+msgstr "Ejecutar pruebas unitarias"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Run Click Everywhere"
+msgstr "Ejecutar clic en todos lados"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Tools"
+msgstr "Herramientas"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Open View"
+msgstr "Abrir vista"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Regenerate Assets"
+msgstr "Regenerar activos"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Become Superuser"
+msgstr "Convertirse en superusuario"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_config_list
+msgid "New"
+msgstr "Nuevo"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_config_list
+msgid "Create a new Cash"
+msgstr "Crear nueva Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_config_list
+msgid "Search..."
+msgstr "Buscar..."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_config_list
+msgid "SearchView"
+msgstr "Vista de búsqueda"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_config_list
+msgid "View: List"
+msgstr "Vista: Lista"
+
+#. module: pos_cashier_extension
+#: model:ir.model.fields,field_description:pos_cashier_extension.field_cashier_config__company_id
+msgid "Company"
+msgstr "Compañía"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Save"
+msgstr "Guardar"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Discard"
+msgstr "Descartar"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Test database neutralized: no emails sent, etc."
+msgstr "Base de datos neutralizada para pruebas: no se envían correos electrónicos, etc."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_tablero
+msgid "Tabelero"
+msgstr "Tablero"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.menu,name:pos_cashier_extension.menu_cashier_console_configuraison
+msgid "Configuraison"
+msgstr "Configuración"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,name:pos_cashier_extension.action_cashier_config
+msgid "Cashier Boxes"
+msgstr "Cajas de la Consola"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Cashier Console Configuration"
+msgstr "Configuración de Consola de Caja"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Cashier Box Configurations"
+msgstr "Configuraciones de Cajas"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Manage your Cashier Console boxes (e.g., Main Counter, Express Lane)."
+msgstr "Gestione sus configuraciones de Cajas (ej. Mostrador Principal, Caja Rápida)."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Manage Cashier Boxes"
+msgstr "Gestionar Cajas"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Name of this cashbox (e.g., Main Counter)."
+msgstr "Nombre de esta caja (ej. Mostrador Principal)."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Journals available for payment in the console."
+msgstr "Diarios disponibles para pago en la consola."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Rounding method applied to cash payments."
+msgstr "Método de redondeo aplicado a pagos en efectivo."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Local Currency Journal"
+msgstr "Diario de Moneda Local"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Default journal for local currency payments."
+msgstr "Diario predeterminado para pagos en moneda local."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Foreign Currency Journal"
+msgstr "Diario de Moneda Extranjera"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Default journal for foreign currency payments."
+msgstr "Diario predeterminado para pagos en moneda extranjera."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Enable logging in as an employee."
+msgstr "Habilitar inicio de sesión como empleado."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Allow switching between employees."
+msgstr "Permitir alternar entre empleados."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Set the basic permission level."
+msgstr "Establecer el nivel de permiso básico."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Set the advanced permission level."
+msgstr "Establecer el nivel de permiso avanzado."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Default tax applied to sales."
+msgstr "Impuesto predeterminado aplicado a las ventas."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Default temporary account for transactions."
+msgstr "Cuenta temporal predeterminada para transacciones."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Default journal for orders."
+msgstr "Diario predeterminado para órdenes."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Default journal for invoices."
+msgstr "Diario predeterminado para facturas."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Automatically create invoices."
+msgstr "Crear facturas automáticamente."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Print portal info"
+msgstr "Imprimir información del portal"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Include portal URL on receipts."
+msgstr "Incluir la URL del portal en los recibos."
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Send receipts via WhatsApp"
+msgstr "Enviar recibos por WhatsApp"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.res_config_settings_view_form
+msgid "Enable sending receipts via WhatsApp."
+msgstr "Habilitar el envío de recibos por WhatsApp."
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,help:pos_cashier_extension.action_cashier_config
+msgid "Create a new Cashier Box Configuration."
+msgstr "Crear una nueva Configuración de Caja."
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,help:pos_cashier_extension.action_cashier_console_invoices_dashboard
+msgid "Create a new invoice"
+msgstr "Crear una nueva factura"
+
+#. module: pos_cashier_extension
+#: model:ir.actions.act_window,help:pos_cashier_extension.action_cashier_console_sale_orders
+msgid "Create a new quotation, the first step of a new sale!"
+msgstr "Crear una nueva cotización, el primer paso de una nueva venta!"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_list
+msgid "Collect"
+msgstr "Cobrar"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_form
+msgid "Open order"
+msgstr "Abrir orden"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_order_form
+msgid "Open document"
+msgstr "Abrir documento"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Open"
+msgstr "Abrir"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "To invoice"
+msgstr "A facturar"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Invoiced"
+msgstr "Facturado"
+
+#. module: pos_cashier_extension
+#: model:ir.ui.view,arch_db:pos_cashier_extension.view_cashier_console_session_form
+msgid "Orders"
+msgstr "Órdenes"

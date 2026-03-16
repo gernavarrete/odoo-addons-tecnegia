@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Tree -->
+    <record id="view_cashier_payment_method_list" model="ir.ui.view">
+        <field name="name">cashier.payment.method.list</field>
+        <field name="model">cashier.payment.method</field>
+        <field name="arch" type="xml">
+            <list string="Payment Methods" default_order="sequence,name">
+                <field name="sequence" invisible="1" />
+                <field name="name" />
+                <field name="journal_id" />
+                <field name="is_cash_count" />
+                <field name="company_id" groups="base.group_multi_company" />
+                <field name="active" />
+            </list>
+        </field>
+    </record>
+
+    <!-- Form -->
+    <record id="view_cashier_payment_method_form" model="ir.ui.view">
+        <field name="name">cashier.payment.method.form</field>
+        <field name="model">cashier.payment.method</field>
+        <field name="arch" type="xml">
+            <form string="Payment Method">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" />
+                            <field name="active" />
+                        </group>
+                        <group>
+                            <field name="journal_id" />
+                            <field name="is_cash_count" />
+                            <field name="company_id" groups="base.group_multi_company" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

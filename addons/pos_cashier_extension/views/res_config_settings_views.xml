@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.pos_cashier_extension</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//form/app[last()]" position="after">
+
+                <app data-string="Cashier Console"
+                    string="Cashier Console"
+                    name="pos_cashier_extension"
+                    logo="/pos_cashier_extension/static/src/img/logo-caja.png">
+
+                    <block title="Cashier Console Configuration">
+                        <setting>
+                            <div class="o_setting_box">
+                                <div class="o_setting_right_pane">
+                                    <span class="o_form_label">Cashier Box Configurations</span>
+                                    <div class="text-muted">
+                                        Manage your Cashier Console boxes (e.g., Main Counter,
+                                        Express
+                                        Lane).
+                                    </div>
+                                    <button name="%(pos_cashier_extension.action_cashier_config)d"
+                                        icon="fa-arrow-right"
+                                        type="action"
+                                        string="Manage Cashier Boxes"
+                                        class="oe_link" />
+                                </div>
+                            </div>
+                        </setting>
+                    </block>
+
+                    <block title="Cashbox">
+                        <setting string="Cashbox name"
+                            help="Name of this cashbox (e.g., Main Counter).">
+                            <field name="cashier_console_cashbox_name" />
+                        </setting>
+                    </block>
+
+                    <block title="Payments">
+                        <setting string="Payment methods"
+                            help="Payment methods available in the console.">
+                            <field name="cashier_console_payment_method_ids" widget="many2many_tags" />
+                        </setting>
+                        <setting string="Cash rounding"
+                            help="Rounding method applied to cash payments.">
+                            <field name="cashier_console_cash_rounding_method_id" />
+                        </setting>
+                        <setting string="Local Currency Journal"
+                            help="Default journal for local currency payments.">
+                            <field name="cashier_console_local_currency_journal_id" />
+                        </setting>
+                        <setting string="Foreign Currency Journal"
+                            help="Default journal for foreign currency payments.">
+                            <field name="cashier_console_foreign_currency_journal_id" />
+                        </setting>
+                    </block>
+
+                    <block title="Permissions">
+                        <setting string="Login as employee" help="Enable logging in as an employee.">
+                            <field name="cashier_console_login_as_employee" />
+                        </setting>
+                        <setting string="Allow employee switch"
+                            help="Allow switching between employees.">
+                            <field name="cashier_console_allow_employee_switch" />
+                        </setting>
+                        <setting string="Basic level" help="Set the basic permission level.">
+                            <field name="cashier_console_basic_permissions" widget="radio" />
+                        </setting>
+                        <setting string="Advanced permissions"
+                            help="Set the advanced permission level.">
+                            <field name="cashier_console_advanced_permissions" widget="radio" />
+                        </setting>
+                    </block>
+
+                    <block title="Accounting">
+                        <setting string="Default sales tax" help="Default tax applied to sales.">
+                            <field name="cashier_console_default_tax_id" />
+                        </setting>
+                        <setting string="Default temporary account"
+                            help="Default temporary account for transactions.">
+                            <field name="cashier_console_temp_account_id" />
+                        </setting>
+                        <setting string="Default order journal" help="Default journal for orders.">
+                            <field name="cashier_console_default_order_journal_id" />
+                        </setting>
+                        <setting string="Default invoice journal"
+                            help="Default journal for invoices.">
+                            <field name="cashier_console_default_invoice_journal_id" />
+                        </setting>
+                        <setting string="Auto invoice" help="Automatically create invoices.">
+                            <field name="cashier_console_auto_invoice" />
+                        </setting>
+                    </block>
+
+                    <block title="Receipts">
+                        <setting string="Print portal info" help="Include portal URL on receipts.">
+                            <field name="cashier_console_print_portal_info" />
+                        </setting>
+                        <setting string="Send receipts via WhatsApp"
+                            help="Enable sending receipts via WhatsApp.">
+                            <field name="cashier_console_send_receipt_whatsapp" />
+                        </setting>
+                    </block>
+
+                </app>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

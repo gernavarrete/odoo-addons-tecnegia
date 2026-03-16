@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_cashier_config_manager,Cashier Config Manager,model_cashier_config,pos_cashier_extension.group_cashier_console_manager,1,1,1,1
+access_cashier_config_user,Cashier Config User,model_cashier_config,pos_cashier_extension.group_cashier_console_user,1,0,0,0
+access_cashier_session_user,Cashier Session User,model_cashier_console_session,pos_cashier_extension.group_cashier_console_user,1,1,1,1
+access_cashier_order_user,Cashier Order User,model_cashier_console_order,pos_cashier_extension.group_cashier_console_user,1,1,1,0
+access_cashier_payment_wizard_user,Cashier Payment Wizard User,model_cashier_payment_wizard,pos_cashier_extension.group_cashier_console_user,1,1,1,1
+access_cashier_pin_wizard_user,Cashier PIN Wizard User,model_cashier_pin_wizard,pos_cashier_extension.group_cashier_console_user,1,1,1,1
+access_cashier_payment_method_user,Cashier payment methods,model_cashier_payment_method,base.group_user,1,1,1,1
