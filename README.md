@@ -1,17 +1,21 @@
-# odoo-apps-tecnegia
-Technogia — Odoo Addons for Business Solutions  Technogia develops and maintains professional Odoo addons designed to enhance business management, automation, and digital transformation.  Our modules focus on improving efficiency in key areas such as sales, inventory, accounting, logistics, and data integration.
+# odoo-addons-tecnegia
+
+Tecnegia — Soluciones de Negocio en Odoo
+
+Este repositorio contiene módulos profesionales para Odoo desarrollados y mantenidos por Tecnegia, enfocados en la optimización de procesos empresariales y la transformación digital.
 
 ## Compatibilidad
 
-Este repositorio corresponde a la serie **18.0** de Odoo y todos los módulos se prueban contra esa versión.
+Este repositorio corresponde a la serie **19.0** de Odoo.
 
 ## Módulos disponibles
 
-### Cashier Console
+### Advanced Credit Limit Management (credit_limit_custom)
 
-Aplicación que unifica configuraciones y flujos de cobro para los equipos de
-caja. Permite definir diarios por compañía, controlar el acceso por empleado y
-registrar cobros de órdenes de venta mediante un asistente que genera la
-factura y el recibo correspondientes. The module surfaces as a dedicated app
-tile in Odoo 18 and offers a guided payment wizard to keep sales orders,
-invoices, and receipts in sync.
+Este módulo proporciona una gestión avanzada de los límites de crédito de los clientes, seguimiento de pagos y control de descuentos en ventas.
+
+**Características principales:**
+- Gestión dinámica de límites de crédito por cliente.
+- Seguimiento detallado de pagos y trazabilidad de cheques.
+- Control de descuentos financieros vinculados a condiciones de pago.
+- Flujos de aprobación para excepciones de crédito.
