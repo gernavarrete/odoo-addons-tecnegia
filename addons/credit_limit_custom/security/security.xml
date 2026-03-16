@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="module_credit_limit_category" model="ir.module.category">
+            <field name="name">Credit and Discount Management</field>
+            <field name="description">Manages permissions for credit limits and sales discounts.</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="privilege_credit_workflow" model="res.groups.privilege">
+            <field name="name">Credit Limit Workflow</field>
+            <field name="category_id" ref="credit_limit_custom.module_credit_limit_category" />
+            <field name="sequence">1</field>
+        </record>
+
+        <record id="privilege_discount_management" model="res.groups.privilege">
+            <field name="name">Discount Management</field>
+            <field name="category_id" ref="credit_limit_custom.module_credit_limit_category" />
+            <field name="sequence">2</field>
+        </record>
+    </data>
+
+    <data>
+        <record id="group_credit_limit_applicant" model="res.groups">
+            <field name="name">Credit Limit Applicant</field>
+            <field name="privilege_id" ref="credit_limit_custom.privilege_credit_workflow" />
+            <field name="comment">Can create/modify the initial credit limit/Credit Account request.</field>
+        </record>
+
+        <record id="group_credit_risk_analyst" model="res.groups">
+            <field name="name">Credit Risk Analyst</field>
+            <field name="privilege_id" ref="credit_limit_custom.privilege_credit_workflow" />
+            <field name="comment">Receives requests and prepares documentation for approval.</field>
+        </record>
+
+        <record id="group_credit_limit_approver" model="res.groups">
+            <field name="name">Credit Limit Administrator (Approver)</field>
+            <field name="privilege_id" ref="credit_limit_custom.privilege_credit_workflow" />
+            <field name="comment">Can approve/reject the credit limit/Credit Account request.</field>
+        </record>
+
+        <record id="group_discount_limit_manager" model="res.groups">
+            <field name="name">Discount Limit Manager</field>
+            <field name="privilege_id" ref="credit_limit_custom.privilege_discount_management" />
+            <field name="comment">Can modify discount limits on configuration.</field>
+        </record>
+
+        <record id="group_nota_credito" model="res.groups">
+            <field name="name">Create Credit Note</field>
+            <field name="comment">Can create credit notes manually.</field>
+        </record>
+
+        <record id="credit_limit_fields_manager_rule" model="ir.rule">
+            <field name="name">Credit Limit Rule (Approver Full Access)</field>
+            <field name="model_id" ref="base.model_res_partner" />
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups"
+                eval="[(4, ref('credit_limit_custom.group_credit_limit_approver'))]" />
+            <field name="perm_read" eval="True" />
+            <field name="perm_write" eval="True" />
+            <field name="perm_create" eval="True" />
+            <field name="perm_unlink" eval="True" />
+        </record>
+
+    </data>
+</odoo>

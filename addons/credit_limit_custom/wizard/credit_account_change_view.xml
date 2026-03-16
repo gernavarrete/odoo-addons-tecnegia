@@ -1,0 +1,50 @@
+<odoo>
+    <record id="view_credit_account_change_form" model="ir.ui.view">
+        <field name="name">credit.account.change.form</field>
+        <field name="model">credit.account.change</field>
+        <field name="arch" type="xml">
+            <form string="Credit Limit Request">
+                <field name="is_open_already" invisible="1" />
+
+                <sheet>
+                    <div class="alert alert-info" role="alert" invisible="action_type == 'close' or is_open_already == True">
+                        <i class="fa fa-info-circle" /> 
+                        Enter the <b>NEW TOTAL LIMIT</b> desired.
+                        (Example: If they have $1000 and want $500 more, enter $1500).
+                    </div>
+
+                    <div class="alert alert-info" role="alert" invisible="action_type == 'close' or is_open_already == False">
+                        <i class="fa fa-refresh" /> 
+                        You are updating the limit of an active account. Enter the new total.
+                    </div>
+
+                    <div class="alert alert-warning" role="alert" invisible="action_type == 'open'">
+                        <i class="fa fa-exclamation-triangle" /> 
+                        You are about to <b>CLOSE</b> the credit account.
+                    </div>
+
+                    <group>
+                        <field name="action_type" invisible="1" />
+                        <field name="partner_id" invisible="1" />
+                        <field name="currency_id" invisible="1" />
+                        
+                        <group string="Limit Information" invisible="action_type == 'close'">
+                            <field name="current_credit_limit" decoration-bf="1"/>
+                            <field name="amount" required="action_type == 'open'" class="oe_inline"/>
+                        </group>
+                        
+                        <group string="Justification">
+                            <field name="reason" placeholder="E.g. Sales increase, folder update..." />
+                            <field name="description" placeholder="Additional details..." />
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_confirm" string="Confirm Change" type="object"
+                        class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

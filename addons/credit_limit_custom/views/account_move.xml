@@ -1,0 +1,28 @@
+<odoo>
+    <record id="account_move_form_inherit" model="ir.ui.view">
+        <field name="name">account.move.form.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form" />
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_shipping_id']" position="after">
+                <field name="credit_limit_total_custom" invisible="current_account_custom != True" />
+                <field name="credit_used" invisible="current_account_custom != True" />
+                <field name="available_credit" invisible="current_account_custom != True" />
+            </xpath>
+
+            <xpath expr="//button[@name='action_reverse']" position="replace">
+                <button
+                    name="action_reverse"
+                    string="Credit Note"
+                    type="object"
+                    groups="credit_limit_custom.group_nota_credito"
+                    invisible="move_type not in ('out_invoice', 'in_invoice') or state != 'posted'"
+                    data-hotkey="shift+n"
+                />
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

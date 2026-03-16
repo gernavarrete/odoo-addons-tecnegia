@@ -1,0 +1,190 @@
+<odoo>
+    <data>
+        <record id="res_partner_inherit" model="ir.ui.view">
+            <field name="name">res.partner.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='category_id']" position="after">
+                    <field name="credit_limit_state" widget="badge"
+                        invisible="current_account_custom == False" />
+
+                    <field name="account_blocked_by_analyst" invisible="1" />
+
+                    <label for="current_account_custom" />
+                    <div class="o_row">
+                        <field name="current_account_custom" readonly="1" />
+
+                        <button name="action_open_account_change_wizard"
+                            type="object"
+                            string="Abrir Cuenta Cte"
+                            class="btn text-white btn-success rounded-pill fw-bold px-3 py-1"
+                            icon="fa-check-circle"
+                            context="{'default_action_type': 'open'}"
+                            groups="credit_limit_custom.group_credit_limit_applicant,credit_limit_custom.group_discount_limit_manager"
+                            invisible="current_account_custom == True or account_blocked_by_analyst == True" />
+
+                        <button name="action_update_credit_limit_wizard"
+                            type="object"
+                            string="Actualizar Límite"
+                            class="btn text-white btn-primary rounded-pill fw-bold px-3 py-1"
+                            icon="fa-refresh"
+                            groups="credit_limit_custom.group_credit_limit_applicant,credit_limit_custom.group_discount_limit_manager"
+                            invisible="current_account_custom == False" />
+
+                        <button name="action_open_account_change_wizard"
+                            type="object"
+                            string="Cerrar Cuenta Cte"
+                            class="btn text-white btn-danger rounded-pill fw-bold px-3 py-1"
+                            icon="fa-ban"
+                            context="{'default_action_type': 'close'}"
+                            groups="credit_limit_custom.group_credit_limit_approver"
+                            invisible="current_account_custom == False" />
+
+                        <button name="action_analyst_block_account"
+                            type="object"
+                            string="Bloquear Cuenta"
+                            class="btn btn-sm btn-danger"
+                            groups="credit_limit_custom.group_credit_risk_analyst"
+                            invisible="current_account_custom == False"
+                            confirm="¿Está seguro de que desea BLOQUEAR esta cuenta por falta de pago?" />
+
+                        <button name="action_analyst_unblock_account"
+                            type="object"
+                            string="Reapertura de Cuenta"
+                            class="btn btn-sm btn-warning"
+                            groups="credit_limit_custom.group_credit_risk_analyst"
+                            invisible="account_blocked_by_analyst == False"
+                            confirm="¿Confirmar reapertura y restablecimiento del crédito?" />
+                    </div>
+                    <field name="can_approve_credit" invisible="1" />
+                    <field name="can_edit_limit_analyst" invisible="1" />
+                    <field name="analyst_approval_enabled" invisible="1" />
+                </xpath>
+                <xpath expr="//sheet" position="before">
+                    <header>
+                        <button name="action_request_credit_limit"
+                            string="Solicitar Aprobación"
+                            type="object"
+                            class="oe_highlight"
+                            groups="credit_limit_custom.group_credit_limit_applicant"
+                            invisible="credit_limit_state != 'draft'" />
+
+                        <button name="action_analyze_credit_limit"
+                            string="Analizar Documentación"
+                            type="object"
+                            class="oe_highlight"
+                            groups="credit_limit_custom.group_credit_risk_analyst"
+                            invisible="credit_limit_state != 'requested'" />
+
+                        <button name="action_approve_credit_limit"
+                            string="Aprobar Límite"
+                            type="object"
+                            class="oe_highlight"
+                            groups="credit_limit_custom.group_credit_limit_approver"
+                            invisible="credit_limit_state not in ['requested', 'analyzed']" />
+
+                        <button name="action_approve_credit_limit"
+                            string="Aprobar Límite"
+                            type="object"
+                            class="oe_highlight"
+                            groups="credit_limit_custom.group_credit_risk_analyst"
+                            invisible="credit_limit_state not in ['requested', 'analyzed'] or not analyst_approval_enabled" />
+
+                        <button name="action_reject_credit_limit"
+                            string="Rechazar Solicitud"
+                            type="object"
+                            groups="credit_limit_custom.group_credit_limit_approver"
+                            invisible="credit_limit_state not in ['requested', 'analyzed']" />
+
+                        <button name="action_reject_credit_limit"
+                            string="Rechazar Solicitud"
+                            type="object"
+                            groups="credit_limit_custom.group_credit_risk_analyst"
+                            invisible="credit_limit_state not in ['requested', 'analyzed'] or not analyst_approval_enabled" />
+
+                        <field name="credit_limit_state" widget="statusbar"
+                            statusbar_visible="draft,requested,approved" />
+                    </header>
+                </xpath>
+
+                <xpath expr="//page[@name='internal_notes']" position="before">
+                    <page name="account_status" string="Credit Limit"
+                        invisible="current_account_custom == False">
+                        <div class="mb-3">
+                            <button name="%(credit_limit_custom.action_upload_credit_document)d"
+                                type="action"
+                                string="Subir Documentación"
+                                icon="fa-upload"
+                                class="btn btn-outline-primary"
+                                groups="credit_limit_custom.group_credit_risk_analyst"
+                                context="{'default_partner_id': id}" />
+                        </div>
+                        <group string="Credit Configuration">
+                            <field name="credit_limit_custom"
+                                readonly="credit_limit_state != 'approved' or can_approve_credit == False"
+                            />
+
+                            <field name="requested_credit_limit"
+                                readonly="credit_limit_state != 'draft' and not can_approve_credit"
+                                invisible="credit_limit_state == 'approved'"
+                            />
+                        </group>
+                        <group string="Current Status">
+                            <field name="credit_used" />
+                            <field name="available_credit" />
+                            <field name="pending_check_amount"
+                                help="Monto de cheques recibidos que aún no fueron depositados o usados para pagar proveedores"/>
+                        </group>
+                    </page>
+
+                </xpath>
+
+            </field>
+        </record>
+
+        <!-- Filtro de búsqueda para cuenta corriente -->
+        <record id="res_partner_search_inherit_credit" model="ir.ui.view">
+            <field name="name">res.partner.search.inherit.credit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_res_partner_filter" />
+            <field name="arch" type="xml">
+                <filter name="type_company" position="after">
+                    <separator/>
+                    <filter name="filter_credit_account"
+                        string="Con Cuenta Corriente"
+                        domain="[('current_account_custom', '=', True)]"
+                        icon="fa-credit-card"/>
+                    <filter name="filter_credit_blocked"
+                        string="CC Bloqueada"
+                        domain="[('account_blocked_by_analyst', '=', True)]"
+                        icon="fa-ban"/>
+                </filter>
+                <filter name="type_company" position="after">
+                    <filter name="filter_credit_state_approved"
+                        string="Crédito Aprobado"
+                        domain="[('credit_limit_state', '=', 'approved')]"/>
+                    <filter name="filter_credit_state_requested"
+                        string="Crédito Solicitado"
+                        domain="[('credit_limit_state', '=', 'requested')]"/>
+                </filter>
+            </field>
+        </record>
+
+        <!-- Columnas de crédito en la vista de lista de contactos -->
+        <record id="res_partner_tree_inherit_credit" model="ir.ui.view">
+            <field name="name">res.partner.tree.inherit.credit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree" />
+            <field name="arch" type="xml">
+                <field name="email" position="after">
+                    <field name="current_account_custom" string="CC" optional="hide"/>
+                    <field name="credit_limit_custom" string="Límite Aprobado" optional="hide" widget="monetary"/>
+                    <field name="credit_used" string="Crédito Utilizado" optional="hide" widget="monetary"/>
+                    <field name="available_credit" string="Crédito Disponible" optional="hide" widget="monetary"/>
+                    <field name="pending_check_amount" string="Cheques Pendientes" optional="hide" widget="monetary"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</odoo>
